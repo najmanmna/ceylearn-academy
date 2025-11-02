@@ -74,7 +74,7 @@ const Hero = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 scale-150 sm:scale-100 transition-opacity duration-1000 ease-in-out ${
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -107,12 +107,12 @@ const Hero = () => {
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-brand_orange tracking-tight mt-2">
               {slide.subtitle}
             </h2>
-            <p className="mt-6 text-base sm:text-lg md:text-xl max-w-2xl text-white_gray">
+            <p className="mt-6 text-base  sm:text-lg md:text-xl max-w-2xl text-white_gray">
               {slide.description}
             </p>
 
             {/* Action Buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-10 mx-24 flex flex-col sm:flex-row gap-4 justify-center">
               {" "}
               {/* <-- FIX #1: Added justify-center */}
               {slide.buttons.map((button) => (
@@ -123,7 +123,7 @@ const Hero = () => {
                     button.primary
                       ? "bg-brand_orange text-dark_blue" // Primary button style
                       : "bg-white text-dark_blue" // Secondary button style
-                  } px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold text-base sm:text-lg hover:bg-opacity-90 transition-all hover:scale-105`}
+                  } px-4 py-2 sm:px-8 sm:py-3 rounded-md font-semibold text-base sm:text-lg hover:bg-opacity-90 transition-all hover:scale-105`}
                 >
                   {button.text}
                 </Link>

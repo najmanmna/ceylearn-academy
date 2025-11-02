@@ -1,5 +1,9 @@
+import About from "@/components/About";
+import FeaturedCourses from "@/components/FeaturedCourses";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import WhyChoose from "@/components/WhyChoose";
+
 
 export default function Home() {
   return (
@@ -11,6 +15,9 @@ export default function Home() {
         {/* Hero Section */}
       
 <Hero />
+<WhyChoose />
+<FeaturedCourses />
+<About /> 
         {/* You can add more sections here */}
         {/* <section>...</section> */}
         {/* <section>...</section> */}
