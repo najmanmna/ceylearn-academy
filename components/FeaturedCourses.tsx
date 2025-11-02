@@ -1,10 +1,10 @@
 import React from 'react';
+import Link from 'next/link'; // Import Link for the button
 import CourseCard from './CourseCard'; 
-// Import your new single source of truth
 import { allCourses } from '@/data/courseData'; // Adjust path
 
 const FeaturedCourses = () => {
-  // You can .slice(0, 4) to only show the first 4 "featured" courses
+  // Get the first 4 courses to feature
   const featured = allCourses.slice(0, 4);
 
   return (
@@ -25,15 +25,25 @@ const FeaturedCourses = () => {
           {featured.map((course) => (
             <CourseCard
               key={course.slug}
-              slug={course.slug}           // Pass the slug for the link
-              title={course.title}         // Pass the title
-              image={course.cardImage}     // Pass the cardImage
-              description={course.summary} // Pass the summary
+              slug={course.slug}
+              title={course.title}
+              image={course.cardImage}
+              description={course.summary}
             />
           ))}
         </div>
         
-        {/* ... View All button ... */}
+        {/* --- View All Courses Button Added --- */}
+        <div className="text-center">
+          <Link
+            href="/courses" // Link to your main courses page
+            className="bg-brand_orange hover:bg-orange-600 text-white font-bold 
+                       px-8 py-3 rounded-lg text-lg transition-colors duration-300
+                       inline-block" // Use inline-block for Link styling
+          >
+            View All Courses
+          </Link>
+        </div>
       </div>
     </section>
   );
