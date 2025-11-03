@@ -44,7 +44,7 @@ const Header = () => {
           </div>
   <a
               href="tel:+94718269089"
-              className="flex items-center gap-2 hover:text-brand_orange transition-colors"
+              className="flex font-semibold items-center gap-2 hover:text-brand_orange transition-colors"
             >
               <Phone size={16} />
               <span>(+94) 71 826 9089</span>

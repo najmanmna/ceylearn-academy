@@ -4,7 +4,7 @@ export const allCourses = [
     slug: "diploma-in-digital-marketing", // The unique ID for the URL
     title: "Diploma in Digital Marketing",
     summary: "Learn SEO, SEM, and social media strategies to drive growth for real-world clients.",
-    cardImage: "/images/courses/digital-marketing-card.jpg", // Image for the card
+    cardImage: "/courses/digital-marketing.png", // Image for the card
     
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/digital-marketing-header.jpg", // A wider banner for the page
@@ -34,7 +34,7 @@ export const allCourses = [
     instructor: {
       name: "Jane Doe",
       bio: "Jane is a digital marketing consultant with 10+ years of experience helping brands grow.",
-      image: "/images/instructors/jane-doe.png"
+      image: "/courses/digital-marketing.png"
     }
   },
   {
@@ -42,7 +42,7 @@ export const allCourses = [
     slug: "certificate-in-graphic-design",
     title: "Certificate in Graphic Design",
     summary: "Master typography, color theory, and layout to build a stunning design portfolio.",
-    cardImage: "/images/graphic-design-course.png",
+    cardImage: "/courses/graphic-design-course.png",
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/graphic-design-header.jpg",
@@ -80,7 +80,7 @@ export const allCourses = [
     slug: "certificate-in-mobile-photography",
     title: "Certificate in Mobile Photography",
     summary: "Learn to take and edit professional photos using just your smartphone.",
-    cardImage: "/images/courses/mobile-photography-card.jpg",
+    cardImage: "/courses/mobile-photography.png",
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/mobile-photography-header.jpg",
@@ -118,7 +118,7 @@ export const allCourses = [
     slug: "certificate-in-ms-office",
     title: "Certificate in MS Office",
     summary: "Master Word, Excel, and PowerPoint to boost your productivity in any office environment.",
-    cardImage: "/images/courses/ms-office-card.jpg",
+    cardImage: "/courses/ms-office.png",
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/ms-office-header.jpg",

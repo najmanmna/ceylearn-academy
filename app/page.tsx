@@ -6,6 +6,7 @@ import WhyChoose from "@/components/WhyChoose";
 import TestimonialSection from "@/components/TestimonialSection";
 import CtaSection from "@/components/CTA";
 import Gallery from "@/components/Gallery";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
 <TestimonialSection />
 <CtaSection />
 <Gallery />
+<Footer />
         {/* You can add more sections here */}
         {/* <section>...</section> */}
         {/* <section>...</section> */}

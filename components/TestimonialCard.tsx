@@ -25,11 +25,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, title, quote, i
 
         <div className="h-14 bg-white rounded-t-lg"></div>
         
-        <div className="bg-dark_blue text-white p-8 rounded-b-lg flex flex-col flex-grow">
+        <div className="bg-dark_blue text-white p-8 rounded-b-lg flex flex-col grow">
           <span className="text-brand_orange text-6xl font-bold leading-none -ml-2">
             “
           </span>
-          <p className="italic my-4 flex-grow">{quote}</p>
+          <p className="italic my-4 grow">{quote}</p>
           <span className="text-brand_orange text-6xl font-bold leading-none ml-auto -mr-2">
             ”
           </span>

@@ -130,10 +130,10 @@ const TestimonialSection = () => {
                 return (
                   <div
                     key={index}
-                    className="flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[45%] md:basis-[30%] pl-4 md:pl-6"
+                    className="shrink-0 grow-0 basis-[80%] sm:basis-[45%] md:basis-[30%] pl-4 md:pl-6"
                   >
                     <div
-                      className={`transition-transform transition-shadow duration-500 ease-out transform-gpu ${
+                      className={` transition-shadow duration-500 ease-out transform-gpu ${
                         isActive ? "scale-105 shadow-xl z-10" : "scale-90 opacity-90"
                       }`}
                     >
