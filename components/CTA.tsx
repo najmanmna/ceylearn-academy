@@ -8,17 +8,17 @@ const CtaSection = () => {
       {/* Top-left orange corner */}
       <div 
         className="absolute top-0 left-0 w-0 h-0 z-0
-                   border-t-[100px] border-t-brand_orange
-                   border-r-[100px] border-r-transparent
-                   md:border-t-[200px] md:border-r-[200px]"
+                   border-t-100 border-t-brand_orange
+                   border-r-100 border-r-transparent
+                   md:border-t-200 md:border-r-200"
       />
 
       {/* Bottom-right orange corner */}
       <div 
         className="absolute bottom-0 right-0 w-0 h-0 z-0
-                   border-b-[100px] border-b-brand_orange
-                   border-l-[100px] border-l-transparent
-                   md:border-b-[200px] md:border-l-[200px]"
+                   border-b-100 border-b-brand_orange
+                   border-l-100 border-l-transparent
+                   md:border-b-200 md:border-l-200"
       />
 
       {/* Content Container */}
