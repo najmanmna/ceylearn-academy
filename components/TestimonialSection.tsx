@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay"; // ✅ import autoplay plugin
 import { EmblaOptionsType } from "embla-carousel";
 import TestimonialCard, { TestimonialCardProps } from "./TestimonialCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -79,7 +80,11 @@ const DotButton = ({
 // --- Main Component ---
 const TestimonialSection = () => {
   const options: EmblaOptionsType = { loop: true, align: "center" };
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+
+  // ✅ Add autoplay plugin
+  const autoplayOptions = Autoplay({ delay: 4000, stopOnInteraction: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplayOptions]);
+
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -118,32 +123,32 @@ const TestimonialSection = () => {
           <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
 
           {/* Embla Viewport */}
-        <div className="overflow-hidden" ref={emblaRef}>
-  <div className="flex items-center -ml-4 md:-ml-6">
-    {testimonials.map((testimonial, index) => {
-      const isActive = index === selectedIndex;
-      return (
-        <div
-          key={index}
-          className="flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[45%] md:basis-[30%] pl-4 md:pl-6"
-        >
-          <div
-            className={`transition-transform transition-shadow duration-500 ease-out 
-                        ${isActive ? "scale-105 shadow-xl z-10" : "scale-90 opacity-90"}`}
-          >
-            <TestimonialCard
-              name={testimonial.name}
-              title={testimonial.title}
-              quote={testimonial.quote}
-              isActive={isActive}
-            />
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex items-center -ml-4 md:-ml-6">
+              {testimonials.map((testimonial, index) => {
+                const isActive = index === selectedIndex;
+                return (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 flex-grow-0 basis-[80%] sm:basis-[45%] md:basis-[30%] pl-4 md:pl-6"
+                  >
+                    <div
+                      className={`transition-transform transition-shadow duration-500 ease-out transform-gpu ${
+                        isActive ? "scale-105 shadow-xl z-10" : "scale-90 opacity-90"
+                      }`}
+                    >
+                      <TestimonialCard
+                        name={testimonial.name}
+                        title={testimonial.title}
+                        quote={testimonial.quote}
+                        isActive={isActive}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      );
-    })}
-  </div>
-</div>
-
 
           {/* Dots */}
           <div className="flex justify-center mt-8">

@@ -32,7 +32,7 @@ const Header = () => {
       <div className="bg-dark_blue text-white_gray py-2">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm">
           {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+          <div className="flex flex-col font-semibold sm:flex-row items-center gap-2 sm:gap-72">
             <a
               href="mailto:ceylearnacademy@gmail.com"
               className="flex items-center gap-2 hover:text-brand_orange transition-colors"
@@ -40,15 +40,15 @@ const Header = () => {
               <Mail size={16} />
               <span>ceylearnacademy@gmail.com</span>
             </a>
-            <a
+          
+          </div>
+  <a
               href="tel:+94718269089"
               className="flex items-center gap-2 hover:text-brand_orange transition-colors"
             >
               <Phone size={16} />
               <span>(+94) 71 826 9089</span>
             </a>
-          </div>
-
           {/* Social Links */}
           <div className="flex gap-3 items-center mt-2 sm:mt-0">
             {/* Facebook */}
