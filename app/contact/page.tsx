@@ -11,13 +11,24 @@ import {
   Linkedin,
   Youtube,
   Send,
-  MapPin, // Added icon
-  Clock, // Added icon
+  MapPin,
+  Clock,
+  MessageCircle, // Added for WhatsApp
 } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
+import { allCourses } from "@/data/courseData"; // 1. Import course data
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function ContactUsPage() {
+  // --- WhatsApp Configuration ---
+  const whatsappNumber = "+94718269089";
+  const prefilledMessage =
+    "Hello Ceylearn Academy! I'm interested in one of your courses.";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    prefilledMessage
+  )}`;
+  // --- End Configuration ---
+
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800">
       <Header />
@@ -26,7 +37,7 @@ export default function ContactUsPage() {
         {/* 1. Page Hero Section */}
         <section className="relative h-[40vh] bg-dark_blue text-white flex items-center justify-center">
           <Image
-            src="/hero1.png" // Placeholder. Use a real, professional image
+            src="/hero2.png" // Placeholder. Use a real, professional image
             alt="Contact Ceylearn Academy"
             layout="fill"
             objectFit="cover"
@@ -34,7 +45,7 @@ export default function ContactUsPage() {
             priority
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-linear-to-t from-dark_blue via-dark_blue/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-dark_blue via-dark_blue/70 to-transparent"></div>
 
           <div className="z-10 text-center p-4">
             <h1 className="text-4xl md:text-6xl font-bold">Contact Us</h1>
@@ -99,21 +110,35 @@ export default function ContactUsPage() {
                       className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange"
                     />
                   </div>
+                  
+                  {/* 2. Updated Subject Dropdown */}
                   <div>
                     <label
                       htmlFor="subject"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Subject
+                      Subject (Select a Course)
                     </label>
-                    <input
-                      type="text"
+                    <select
                       name="subject"
                       id="subject"
                       required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange"
-                    />
+                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange bg-white"
+                    >
+                      <option value="" disabled selected>
+                        Please select a course...
+                      </option>
+                      {allCourses.map((course) => (
+                        <option key={course.slug} value={course.title}>
+                          {course.title}
+                        </option>
+                      ))}
+                      <option value="General Inquiry">
+                        General Inquiry / Other
+                      </option>
+                    </select>
                   </div>
+
                   <div>
                     <label
                       htmlFor="message"
@@ -150,16 +175,32 @@ export default function ContactUsPage() {
                   <div className="space-y-6">
                     {/* Phone */}
                     <a
-                      href="tel:+94718269089"
+                      href="tel:+94772969052"
                       className="flex items-start gap-4 text-lg text-gray-700 hover:text-brand_orange transition-colors"
                     >
                       <Phone
                         size={24}
-                        className="text-brand_orange shrink-0 mt-1"
+                        className="text-brand_orange flex-shrink-0 mt-1"
                         strokeWidth={2.5}
                       />
-                      <span>(+94) 71 826 9089</span>
+                      <span>(+94) 77 296 9052</span>
                     </a>
+                    
+                    {/* WhatsApp */}
+                    {/* <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-4 text-lg text-gray-700 hover:text-brand_orange transition-colors"
+                    >
+                      <MessageCircle
+                        size={24}
+                        className="text-brand_orange flex-shrink-0 mt-1"
+                        strokeWidth={2.5}
+                      />
+                      <span>Chat with us on WhatsApp</span>
+                    </a> */}
+
                     {/* Email */}
                     <a
                       href="mailto:ceylearnacademy@gmail.com"
@@ -167,7 +208,7 @@ export default function ContactUsPage() {
                     >
                       <Mail
                         size={24}
-                        className="text-brand_orange shrink-0 mt-1"
+                        className="text-brand_orange flex-shrink-0 mt-1"
                         strokeWidth={2.5}
                       />
                       <span>ceylearnacademy@gmail.com</span>
@@ -176,7 +217,7 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-4 text-lg text-gray-700">
                       <MapPin
                         size={24}
-                        className="text-brand_orange shrink-0 mt-1"
+                        className="text-brand_orange flex-shrink-0 mt-1"
                         strokeWidth={2.5}
                       />
                       <span>
@@ -191,7 +232,7 @@ export default function ContactUsPage() {
                     <div className="flex items-start gap-4 text-lg text-gray-700">
                       <Clock
                         size={24}
-                        className="text-brand_orange shrink-0 mt-1"
+                        className="text-brand_orange flex-shrink-0 mt-1"
                         strokeWidth={2.5}
                       />
                       <span>

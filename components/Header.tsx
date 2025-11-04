@@ -43,11 +43,11 @@ const Header = () => {
           
           </div>
   <a
-              href="tel:+94718269089"
+              href="tel:+94772969052"
               className="flex font-semibold items-center gap-2 hover:text-brand_orange transition-colors"
             >
               <Phone size={16} />
-              <span>(+94) 71 826 9089</span>
+              <span>(+94) 77 296 9052</span>
             </a>
           {/* Social Links */}
           <div className="flex gap-3 items-center mt-2 sm:mt-0">
