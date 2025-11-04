@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import TestimonialSection from "@/components/TestimonialSection";
+import HeroVideoSection from "@/components/AboutVideo";
 
 // Placeholder data
 const instructors = [
@@ -130,6 +131,7 @@ export default function AboutUsPage() {
             </motion.div>
           </div>
         </section>
+        <HeroVideoSection />
 
         {/* VISION & MISSION */}
         <section className="py-20 bg-light_blue_bg">
