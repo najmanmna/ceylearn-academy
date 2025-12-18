@@ -7,6 +7,7 @@ export const allCourses = [
       "Learn SEO, SEM, and social media strategies to drive growth for real-world clients.",
     cardImage: "/courses/digital-marketing.png",
     category: "Technology & IT", // Added category
+    previewVideoId: "BGwX7naqE1Y&t=3s", // Added preview video ID
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/digital-marketing-header.jpg", // A wider banner for the page
@@ -48,6 +49,8 @@ export const allCourses = [
       "Master typography, color theory, and layout to build a stunning design portfolio.",
     cardImage: "/courses/graphic-design-course.png",
     category: "Design", // Added category
+    previewVideoId: "BGwX7naqE1Y&t=3s", // Added preview video ID
+
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/graphic-design-header.jpg",
@@ -89,6 +92,8 @@ export const allCourses = [
       "Learn to take and edit professional photos using just your smartphone.",
     cardImage: "/courses/mobile-photography.png",
     category: "Creative Arts", // Added category
+    previewVideoId: "BGwX7naqE1Y&t", // Added preview video ID
+
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/images/courses/mobile-photography-header.jpg",

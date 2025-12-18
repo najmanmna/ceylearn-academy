@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, FormEvent } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -13,313 +14,344 @@ import {
   Send,
   MapPin,
   Clock,
-  MessageCircle, // Added for WhatsApp
+  Check,
+  Copy,
+  Loader2,
 } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
-import { allCourses } from "@/data/courseData"; // 1. Import course data
+import { allCourses } from "@/data/courseData"; 
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function ContactUsPage() {
-  // --- WhatsApp Configuration ---
-  const whatsappNumber = "+94718269089";
-  const prefilledMessage =
-    "Hello Ceylearn Academy! I'm interested in one of your courses.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    prefilledMessage
-  )}`;
-  // --- End Configuration ---
+  // --- State for Form Handling ---
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+
+  // --- Handlers ---
+  
+  // Simulate Form Submission
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate network delay
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    // Reset success message after 5 seconds if you want
+    // setTimeout(() => setIsSuccess(false), 5000);
+  };
+
+  // Copy to Clipboard Utility
+  const handleCopy = (text: string, field: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedField(field);
+    setTimeout(() => setCopiedField(null), 2000);
+  };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gray-800">
+    <div className="flex flex-col min-h-screen bg-white text-gray-800 font-sans">
       <Header />
 
       <main className="grow">
         {/* 1. Page Hero Section */}
-        <section className="relative h-[40vh] bg-dark_blue text-white flex items-center justify-center">
-          <Image
-            src="/hero2.png" // Placeholder. Use a real, professional image
-            alt="Contact Ceylearn Academy"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-30"
-            priority
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-dark_blue via-dark_blue/70 to-transparent"></div>
+        <section className="relative h-[40vh] bg-dark_blue flex items-center justify-center overflow-hidden">
+          {/* Background Image with Parallax-like fix */}
+          <div className="absolute inset-0 z-0">
+             <Image
+                src="/hero2.png" 
+                alt="Contact Ceylearn Academy"
+                fill
+                className="object-cover opacity-20"
+                priority
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-dark_blue via-dark_blue/80 to-transparent"></div>
+          </div>
 
-          <div className="z-10 text-center p-4">
-            <h1 className="text-4xl md:text-6xl font-bold">Contact Us</h1>
-            <p className="text-xl md:text-2xl mt-4 text-brand_orange font-medium">
-              We&apos;re here to help. Reach out to us anytime.
+          <div className="z-10 text-center p-6 max-w-3xl">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">
+              Contact Us
+            </h1>
+            <p className="text-lg md:text-2xl text-brand_orange font-medium animate-fade-in-up">
+              We're here to help you start your journey.
             </p>
           </div>
         </section>
 
         {/* 2. Contact Form & Details Section */}
-        <section className="py-16 md:py-24 bg-white_gray">
+        <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+              
               {/* Left Column: Contact Form */}
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-bold text-dark_blue mb-3">
-                  Send Us a Message
-                </h2>
-                <div className="h-1.5 w-24 bg-brand_orange rounded-full mb-6"></div>
-                <form action="#" method="POST" className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Phone Number (Optional)
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange"
-                    />
-                  </div>
-                  
-                  {/* 2. Updated Subject Dropdown */}
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Subject (Select a Course)
-                    </label>
-                    <select
-                      name="subject"
-                      id="subject"
-                      required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange bg-white"
-                    >
-                      <option value="" disabled selected>
-                        Please select a course...
-                      </option>
-                      {allCourses.map((course) => (
-                        <option key={course.slug} value={course.title}>
-                          {course.title}
-                        </option>
-                      ))}
-                      <option value="General Inquiry">
-                        General Inquiry / Other
-                      </option>
-                    </select>
-                  </div>
+              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-dark_blue">
+                    Send Us a Message
+                  </h2>
+                  <div className="h-1.5 w-20 bg-brand_orange rounded-full mt-3"></div>
+                  <p className="mt-4 text-gray-600">
+                    Have a question about a course? Fill out the form and we'll get back to you within 24 hours.
+                  </p>
+                </div>
 
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700"
+                {isSuccess ? (
+                  // Success State
+                  <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center animate-in fade-in zoom-in duration-300">
+                    <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Check size={32} strokeWidth={3} />
+                    </div>
+                    <h3 className="text-2xl font-bold text-green-800 mb-2">Message Sent!</h3>
+                    <p className="text-green-700 mb-6">
+                      Thank you for contacting Ceylearn Academy. Our team will reach out to you shortly.
+                    </p>
+                    <button 
+                      onClick={() => setIsSuccess(false)}
+                      className="text-green-700 font-semibold hover:underline"
                     >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand_orange focus:border-brand_orange"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <button
-                      type="submit"
-                      className="w-full flex justify-center items-center gap-2 py-3 px-6 border border-transparent rounded-full shadow-sm text-lg font-semibold text-white bg-brand_orange hover:bg-opacity-90 transition-all hover:scale-105"
-                    >
-                      Send Message
-                      <Send size={18} />
+                      Send another message
                     </button>
                   </div>
-                </form>
+                ) : (
+                  // Form State
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        placeholder="John Doe"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand_orange/50 focus:border-brand_orange transition-all"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          required
+                          placeholder="john@example.com"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand_orange/50 focus:border-brand_orange transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          id="phone"
+                          placeholder="077 123 4567"
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand_orange/50 focus:border-brand_orange transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-1">
+                        Interested Course
+                      </label>
+                      <div className="relative">
+                        <select
+                          name="subject"
+                          id="subject"
+                          required
+                          defaultValue=""
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand_orange/50 focus:border-brand_orange transition-all appearance-none"
+                        >
+                          <option value="" disabled>Select a course...</option>
+                          {allCourses.map((course) => (
+                            <option key={course.slug} value={course.title}>
+                              {course.title}
+                            </option>
+                          ))}
+                          <option value="General Inquiry">General Inquiry / Other</option>
+                        </select>
+                        {/* Custom Arrow Icon */}
+                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                          <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" fillRule="evenodd"></path></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={4}
+                        required
+                        placeholder="Tell us how we can help you..."
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand_orange/50 focus:border-brand_orange transition-all resize-none"
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full flex justify-center items-center gap-2 py-4 px-6 rounded-full shadow-lg text-lg font-bold text-white bg-brand_orange hover:bg-orange-600 active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed transition-all"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="animate-spin" size={20} />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send size={18} />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                )}
               </div>
 
-              {/* Right Column: Contact Details */}
+              {/* Right Column: Contact Details & Map */}
               <div className="space-y-8">
-                <div className="bg-white p-8 rounded-lg shadow-lg">
+                
+                {/* Contact Info Card */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                   <h3 className="text-2xl font-bold text-dark_blue mb-6">
                     Get in Touch
                   </h3>
                   <div className="space-y-6">
-                    {/* Phone */}
-                    <a
-                      href="tel:+94772969052"
-                      className="flex items-start gap-4 text-lg text-gray-700 hover:text-brand_orange transition-colors"
-                    >
-                      <Phone
-                        size={24}
-                        className="text-brand_orange flex-shrink-0 mt-1"
-                        strokeWidth={2.5}
-                      />
-                      <span>(+94) 77 296 9052</span>
-                    </a>
                     
-                    {/* WhatsApp */}
-                    {/* <a
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-4 text-lg text-gray-700 hover:text-brand_orange transition-colors"
-                    >
-                      <MessageCircle
-                        size={24}
-                        className="text-brand_orange flex-shrink-0 mt-1"
-                        strokeWidth={2.5}
-                      />
-                      <span>Chat with us on WhatsApp</span>
-                    </a> */}
+                    {/* Phone */}
+                    <div className="group flex items-start gap-4">
+                      <div className="bg-orange-100 p-3 rounded-full text-brand_orange">
+                        <Phone size={24} />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-500 font-medium">Phone</p>
+                        <div className="flex items-center gap-2">
+                          <a href="tel:+94772969052" className="text-md font-semibold text-gray-800 hover:text-brand_orange transition-colors">
+                            (+94) 77 296 9052
+                          </a>
+                          <button 
+                            onClick={() => handleCopy("+94772969052", "phone")}
+                            className="text-gray-400 hover:text-gray-600"
+                            title="Copy number"
+                          >
+                            {copiedField === "phone" ? <Check size={16} className="text-green-500"/> : <Copy size={16}/>}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
 
                     {/* Email */}
-                    <a
-                      href="mailto:ceylearnacademy@gmail.com"
-                      className="flex items-start gap-4 text-lg text-gray-700 hover:text-brand_orange transition-colors"
-                    >
-                      <Mail
-                        size={24}
-                        className="text-brand_orange flex-shrink-0 mt-1"
-                        strokeWidth={2.5}
-                      />
-                      <span>ceylearnacademy@gmail.com</span>
-                    </a>
+                    <div className="group flex items-start gap-4">
+                      <div className="bg-orange-100 p-3 rounded-full text-brand_orange">
+                        <Mail size={24} />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-500 font-medium">Email</p>
+                        <div className="flex items-center gap-2">
+                          <a href="mailto:ceylearnacademy@gmail.com" className="text-md font-semibold text-gray-800 hover:text-brand_orange transition-colors break-all">
+                            ceylearnacademy@gmail.com
+                          </a>
+                          <button 
+                             onClick={() => handleCopy("ceylearnacademy@gmail.com", "email")}
+                             className="text-gray-400 hover:text-gray-600"
+                             title="Copy email"
+                          >
+                             {copiedField === "email" ? <Check size={16} className="text-green-500"/> : <Copy size={16}/>}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Address */}
-                    <div className="flex items-start gap-4 text-lg text-gray-700">
-                      <MapPin
-                        size={24}
-                        className="text-brand_orange flex-shrink-0 mt-1"
-                        strokeWidth={2.5}
-                      />
-                      <span>
-                        CeyLearn Academy,
-                        <br />
-                        108, Marawa,
-                        <br />
-                        Mawanella, Sri Lanka
-                      </span>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-orange-100 p-3 rounded-full text-brand_orange">
+                        <MapPin size={24} />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500 font-medium">Location</p>
+                        <p className="text-md text-gray-800 leading-snug">
+                          CeyLearn Academy,<br />
+                          108, Marawa,<br />
+                          Mawanella, Sri Lanka
+                        </p>
+                      </div>
                     </div>
-                    {/* Office Hours */}
-                    <div className="flex items-start gap-4 text-lg text-gray-700">
-                      <Clock
-                        size={24}
-                        className="text-brand_orange flex-shrink-0 mt-1"
-                        strokeWidth={2.5}
-                      />
-                      <span>
-                        Monday – Friday:
-                        <br />
-                        9:00 AM – 9:00 PM
-                      </span>
+
+                    {/* Hours */}
+                    <div className="flex items-start gap-4">
+                      <div className="bg-orange-100 p-3 rounded-full text-brand_orange">
+                        <Clock size={24} />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500 font-medium">Office Hours</p>
+                        <p className="text-md text-gray-800">
+                          Mon – Fri: 9:00 AM – 9:00 PM
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white p-8 rounded-lg shadow-lg">
-                  <h3 className="text-2xl font-bold text-dark_blue mb-6">
-                    Follow Us
-                  </h3>
-                  <div className="flex gap-4">
-                    {/* Social Icons */}
-                    <a
-                      href="https://www.facebook.com/profile.php?id=61560449742239"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-brand_orange text-dark_blue flex items-center justify-center p-3 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
-                      aria-label="Facebook"
-                    >
-                      <Facebook size={20} />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-brand_orange text-dark_blue flex items-center justify-center p-3 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
-                      aria-label="Instagram"
-                    >
-                      <Instagram size={20} />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-brand_orange text-dark_blue flex items-center justify-center p-3 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
-                      aria-label="LinkedIn"
-                    >
-                      <Linkedin size={20} />
-                    </a>
-                    <a
-                      href="https://www.tiktok.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-brand_orange text-dark_blue p-3 flex items-center justify-center rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
-                      aria-label="TikTok"
-                    >
-                      <SiTiktok size={18} />
-                    </a>
-                    <a
-                      href="https://www.youtube.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-brand_orange text-dark_blue p-3 flex items-center justify-center rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
-                      aria-label="YouTube"
-                    >
-                      <Youtube size={20} />
-                    </a>
+                {/* Social Links */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                  <h3 className="text-xl font-bold text-dark_blue mb-4">Follow Us</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      { Icon: Facebook, link: "https://www.facebook.com/profile.php?id=61560449742239", label: "Facebook" },
+                      { Icon: Instagram, link: "https://www.instagram.com/", label: "Instagram" },
+                      { Icon: Linkedin, link: "https://www.linkedin.com/", label: "LinkedIn" },
+                      { Icon: SiTiktok, link: "https://www.tiktok.com/", label: "TikTok" },
+                      { Icon: Youtube, link: "https://www.youtube.com/", label: "YouTube" },
+                    ].map(({ Icon, link, label }, index) => (
+                      <a
+                        key={index}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gray-100 text-gray-600 p-3 rounded-full transition-all hover:bg-brand_orange hover:text-white hover:scale-110"
+                        aria-label={label}
+                      >
+                        <Icon size={20} />
+                      </a>
+                    ))}
                   </div>
                 </div>
 
-                {/* Map */}
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                {/* Map Embed - Fixed URL for Mawanella */}
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 h-80">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8823831176287!2d80.44988920972045!3d7.254224914212214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae315006865485d%3A0x46e2f669c8db2436!2sCeyLearn%20Academy!5e0!3m2!1sen!2slk!4v1762152021143!5m2!1sen!2slk"
                     width="100%"
-                    height="320"
+                    height="100%"
                     style={{ border: 0 }}
-                    allowFullScreen={true}
                     loading="lazy"
+                    allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-64 md:h-80"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8823831176287!2d80.44988920972045!3d7.254224914212214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae315006865485d%3A0x46e2f669c8db2436!2sCeyLearn%20Academy!5e0!3m2!1sen!2slk!4v1762152021143!5m2!1sen!2slk"
+                    title="Ceylearn Academy Location"
                   ></iframe>
                 </div>
+
               </div>
             </div>
           </div>
         </section>
       </main>
-      <FloatingWhatsApp />
 
+      <FloatingWhatsApp />
       <Footer />
     </div>
   );
 }
-

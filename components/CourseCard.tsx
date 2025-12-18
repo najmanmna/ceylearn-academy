@@ -1,50 +1,65 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { Clock, ArrowRight } from "lucide-react";
 
-// --- (1) Define the type for the component's props ---
 interface CourseCardProps {
   slug: string;
   image: string;
   title: string;
   description: string;
+  category?: string;
+  duration?: string;
 }
 
-// --- (2) Apply the type to the component ---
-const CourseCard: React.FC<CourseCardProps> = ({ slug, image, title, description }) => {
+const CourseCard = ({ slug, image, title, description, category, duration }: CourseCardProps) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg 
-                   transform transition-all duration-300 
-                   hover:shadow-2xl hover:-translate-y-1
-                   flex flex-col">
+    <div className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-brand_orange/30 transition-all duration-300 flex flex-col h-full">
       
-      {/* Course Image */}
-      <div className="w-full h-56 overflow-hidden">
-        <img
+      {/* 1. Image Area - Clickable */}
+      <Link href={`/courses/${slug}`} className="relative block h-56 overflow-hidden">
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
-      </div>
+        {/* Badge */}
+        {category && (
+            <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-dark_blue text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                {category}
+            </span>
+        )}
+      </Link>
 
-      {/* Course Content */}
+      {/* 2. Content Area */}
       <div className="p-6 flex flex-col grow">
-        <h3 className="text-xl font-semibold text-dark_blue mb-2">
-          {title}
-        </h3>
-        <p className="text-text_gray text-base mb-5">
+        
+        <div className="flex items-center gap-2 text-xs text-brand_orange font-semibold mb-3">
+             {duration && (
+                <>
+                    <Clock size={14} />
+                    <span>{duration}</span>
+                </>
+             )}
+        </div>
+
+        <Link href={`/courses/${slug}`} className="block">
+             <h3 className="text-xl font-bold text-dark_blue mb-3 group-hover:text-brand_orange transition-colors line-clamp-2">
+            {title}
+            </h3>
+        </Link>
+        
+        <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3 grow">
           {description}
         </p>
-        
-        {/* Styled Link component */}
-        <Link 
-          href={`/courses/${slug}`} 
-          className="bg-brand_orange hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg 
-                     transition-colors duration-300 flex items-center group w-full justify-center 
-                     mt-auto"
+
+        {/* 3. Action Button */}
+        <Link
+          href={`/courses/${slug}`}
+          className="inline-flex items-center gap-2 text-brand_orange font-bold text-sm hover:gap-3 transition-all"
         >
           View Details
-          <ArrowRight size={18} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight size={16} />
         </Link>
       </div>
     </div>
