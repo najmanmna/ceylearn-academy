@@ -96,7 +96,7 @@ const Footer = () => {
             {/* Facebook */}
             <div className="relative group">
               <a
-                href="https://www.facebook.com/profile.php?id=61560449742239"
+                href="https://www.facebook.com/p/CeyLearn-Academy-61560449742239/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue flex items-center justify-center p-1.5 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -112,7 +112,7 @@ const Footer = () => {
             {/* Instagram */}
             <div className="relative group">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ceylearn_academy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue flex items-center justify-center p-1.5 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -128,7 +128,7 @@ const Footer = () => {
             {/* LinkedIn */}
             <div className="relative group">
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/company/ceylearn-academy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue flex items-center justify-center p-1.5 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -144,7 +144,7 @@ const Footer = () => {
             {/* TikTok */}
             <div className="relative group">
               <a
-                href="https://www.tiktok.com/"
+                href="https://www.tiktok.com/@ceylearn_academy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue p-1.5 flex items-center justify-center rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -160,7 +160,7 @@ const Footer = () => {
             {/* YouTube */}
             <div className="relative group">
               <a
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/@ceyLearnacademy00"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue p-1.5 flex items-center justify-center rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -183,6 +183,17 @@ const Footer = () => {
         {/* Bottom: Copyright */}
         <div className="text-center text-gray-500 text-sm">
           © {new Date().getFullYear()} Ceylearn Academy. All Rights Reserved.
+        </div>
+        <div className="text-center text-gray-600 text-xs mt-2">
+          Developed by{" "}
+          <a
+            href="https://www.ahamedwebstudio.lk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand_orange transition-colors"
+          >
+            Ahamed Web Studio
+          </a>
         </div>
 
       </div>

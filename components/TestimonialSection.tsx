@@ -10,24 +10,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 // --- Data ---
 const testimonials: TestimonialCardProps[] = [
   {
-    name: "Dilini Ranasinghe",
-    title: "Diploma in Graphic Design Student",
-    quote:
-      "The 10-day graphic design course was the perfect starting point for me. I learned to design posters, social media ads, and simple flyers using Canva and Photoshop. Now, I create designs for small shops in my area and earn while studying. It was short, but full of value!",
-  },
-  {
-    name: "Ahamed Najman",
-    title: "Diploma in Web Development Student",
-    quote:
-      "I was completely new to coding, but the instructors were patient and the curriculum was very practical. I built three real-world projects and now feel confident applying for junior developer roles. Highly recommended!",
-  },
-  {
-    name: "Fathima Rizvi",
-    title: "Certificate in Mehandi Artistry",
-    quote:
-      "I always loved Mehandi, but this course took my skills to a professional level. I learned about bridal designs, cone preparation, and even how to market my business. I started taking clients before I even finished!",
-  },
-  {
     name: "Kamal Perera",
     title: "Advanced English Language Course",
     quote:
@@ -39,6 +21,54 @@ const testimonials: TestimonialCardProps[] = [
     quote:
       "Learning to build mobile apps was a game-changer. The course covered both Android and iOS fundamentals, and I even published my first simple app. The hands-on approach was fantastic.",
   },
+  {
+    name: "Fathima Asrin",
+    title: "Cake Making & Decorating Course",
+    quote:
+      "இந்த கோர்ஸ் எனக்கு மிகவும் பிரயோசனமாக இருந்தது. முதல் மாதத்திலிருந்தே எனக்கு நிறைய கேக் ஆர்டர்கள் வரத் தொடங்கின. ஆசிரியை மிகவும் தெளிவாகக் கற்றுக் கொடுத்தார். Thank you so much Ceylearn Academy!",
+  },
+  {
+    name: "Sakthivel Saran",
+    title: "Graphic Design Student",
+    quote:
+      "This class was incredibly useful and easy to understand. I improved my creativity and confidence, and I've already started working on freelance client projects to gain real experience.",
+  },
+  {
+    name: "Dhanush",
+    title: "Graphic Design Student",
+    quote:
+      "அனைவருக்கும் புரியும் வகையில் இந்த Graphic Design பாடத்தை ஆசிரியர்கள் தெளிவாகக் கற்றுக் கொடுத்தனர். இது எனது படைப்பாற்றலையும் திறனையும் மேம்படுத்தி, என் வாழ்க்கைத் தரத்தை உயர்த்த பெரிதும் உதவியது.",
+  },
+  {
+    name: "Noorah",
+    title: "Mehandi Artistry Student",
+    quote:
+      "Ceylearn Academy provided a wonderful platform to learn traditional henna art. The structured guidance, helpful materials, and encouragement enhanced my artistic confidence and technique tremendously.",
+  },
+  {
+    name: "Anonymous Student",
+    title: "Entrepreneurship / Business",
+    quote:
+      "நான் இன்று தனியாக ஒரு கடை நடத்துமளவிற்கு உங்களது வகுப்பு எனக்கு நிறையவே பயனளித்துள்ளது. அணைத்தும் மிகவும் சிறப்பானது!",
+  },
+  {
+    name: "Salma Nadeem",
+    title: "IT Fundamentals Workshop",
+    quote:
+      "A very useful and informative session. The instructors explained complex concepts in a simple, practical manner, giving me a clear understanding of real-world IT applications.",
+  },
+  {
+    name: "Suriyavadhani",
+    title: "Diploma in Mehandi Artistry",
+    quote:
+      "I completed the 2-month course and couldn't be happier. I learned many new designs and techniques step by step. The teaching was crystal clear, and I now feel entirely confident.",
+  },
+  {
+    name: "Workshop Participant",
+    title: "Free Educational Workshop",
+    quote:
+      "பொது நலம் கருதி முற்றிலும் இலவசமாக நடாத்தப்பட்ட இந்த workshop பலரது வாழ்வில் மிகப்பெரிய மாற்றத்தை ஏற்படுத்தியிருக்கும் என்பதில் எவ்வித சந்தேகமும் இல்லை. Jazakallahu Khaira!"
+  }
 ];
 
 // --- Helper Buttons ---

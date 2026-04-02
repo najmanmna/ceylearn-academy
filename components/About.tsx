@@ -16,9 +16,11 @@ const About = () => {
             </div>
 
             {/* Learn More Button */}
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-md text-lg transition-colors duration-200">
-              Learn More
-            </button>
+            <a href="/about">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-md text-lg transition-colors duration-200">
+                Learn More
+              </button>
+            </a>
           </div>
 
           {/* Right Content - Image */}

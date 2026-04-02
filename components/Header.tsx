@@ -54,7 +54,7 @@ const Header = () => {
             {/* Facebook */}
             <div className="relative group">
               <a
-                href="https://www.facebook.com/profile.php?id=61560449742239"
+                href="https://www.facebook.com/p/CeyLearn-Academy-61560449742239/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue flex items-center justify-center p-1.5 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -70,7 +70,7 @@ const Header = () => {
             {/* Instagram */}
             <div className="relative group">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ceylearn_academy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue flex items-center justify-center p-1.5 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -86,7 +86,7 @@ const Header = () => {
             {/* LinkedIn */}
             <div className="relative group">
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/company/ceylearn-academy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue flex items-center justify-center p-1.5 rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -102,7 +102,7 @@ const Header = () => {
             {/* TikTok */}
             <div className="relative group">
               <a
-                href="https://www.tiktok.com/"
+                href="https://www.tiktok.com/@ceylearn_academy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue p-1.5 flex items-center justify-center rounded-full transition-all hover:bg-opacity-80 hover:scale-110"
@@ -118,7 +118,7 @@ const Header = () => {
             {/* YouTube */}
             <div className="relative group">
               <a
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/@ceyLearnacademy00"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand_orange text-dark_blue p-1.5 flex items-center justify-center rounded-full transition-all hover:bg-opacity-80 hover:scale-110"

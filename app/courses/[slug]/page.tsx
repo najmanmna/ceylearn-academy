@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { allCourses } from "@/data/courseData"; 
-import { 
-  Clock, 
-  BarChart, 
-  CheckCircle2, 
-  BookOpen, 
-  User, 
+import {
+  Clock,
+  BarChart,
+  CheckCircle2,
+  BookOpen,
   Calendar,
   Phone,
   PlayCircle // Added Icon
@@ -116,28 +115,66 @@ export default async function CourseDetailsPage({
               </div>
             </section>
 
-            {/* --- NEW SECTION: Free Lesson Preview --- */}
-            {/* Only renders if previewVideoId exists in data */}
-            {course.previewVideoId && (
+            {/* --- Free Lesson Preview --- */}
+            {(course.previewVideoId || course.previewUrl) && (
               <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                 <h2 className="text-2xl font-bold text-dark_blue mb-6 flex items-center gap-3">
                   <PlayCircle className="text-brand_orange" size={24} />
                   Free Lesson Preview
                 </h2>
-                
-                {/* Responsive YouTube Container */}
-                <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-black shadow-lg">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${course.previewVideoId}`}
-                    title="Course Preview Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute top-0 left-0 w-full h-full border-0"
-                  ></iframe>
-                </div>
-                <p className="text-sm text-gray-500 mt-4 italic">
-                  * Watch a sample lesson from the course curriculum.
-                </p>
+
+                {course.previewVideoId ? (
+                  <>
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-black shadow-lg">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${course.previewVideoId}`}
+                        title="Course Preview Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full border-0"
+                      ></iframe>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-4 italic">
+                      * Watch a sample lesson from the course curriculum.
+                    </p>
+                  </>
+                ) : (
+                  <a
+                    href={course.previewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative block w-full aspect-video rounded-xl overflow-hidden shadow-lg"
+                  >
+                    {/* Thumbnail — blurred course image as background */}
+                    <Image
+                      src={course.cardImage}
+                      alt={`${course.title} preview`}
+                      fill
+                      className="object-cover scale-105 group-hover:scale-110 transition-transform duration-500"
+                    />
+
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300" />
+
+                    {/* YouTube-style play button */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                      <div className="flex items-center justify-center w-20 h-14 bg-red-600 group-hover:bg-red-500 rounded-2xl shadow-2xl transition-all duration-300 group-hover:scale-110">
+                        {/* SVG triangle play icon matching YouTube style */}
+                        <svg viewBox="0 0 68 48" className="w-10 h-7 fill-white">
+                          <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" className="fill-red-600 group-hover:fill-red-500 transition-colors duration-300"/>
+                          <path d="M45 24 27 14v20" className="fill-white"/>
+                        </svg>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-white font-bold text-lg drop-shadow">Watch on YouTube</p>
+                        <p className="text-gray-300 text-sm mt-1 drop-shadow">Visit our channel for more lessons</p>
+                      </div>
+                    </div>
+
+                    {/* YouTube watermark logo bottom-right */}
+                    
+                  </a>
+                )}
               </section>
             )}
 
@@ -164,30 +201,6 @@ export default async function CourseDetailsPage({
               </div>
             </section>
 
-            {/* 4. Instructor */}
-            <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-               <h2 className="text-2xl font-bold text-dark_blue mb-6 flex items-center gap-3">
-                <User className="text-brand_orange" size={24} />
-                Your Instructor
-              </h2>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="relative w-24 h-24 shrink-0">
-                    <Image 
-                        src={course.instructor.image}
-                        alt={course.instructor.name}
-                        fill
-                        className="rounded-full border-4 border-brand_orange/20 object-cover"
-                    />
-                </div>
-                <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold text-gray-900">{course.instructor.name}</h3>
-                    <p className="text-brand_orange font-medium text-sm mb-3">Course Instructor</p>
-                    <p className="text-gray-600 leading-relaxed italic">
-                        "{course.instructor.bio}"
-                    </p>
-                </div>
-              </div>
-            </section>
           </div>
 
           {/* RIGHT COLUMN (Sticky Sidebar) */}

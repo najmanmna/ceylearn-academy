@@ -310,11 +310,11 @@ export default function ContactUsPage() {
                   <h3 className="text-xl font-bold text-dark_blue mb-4">Follow Us</h3>
                   <div className="flex flex-wrap gap-3">
                     {[
-                      { Icon: Facebook, link: "https://www.facebook.com/profile.php?id=61560449742239", label: "Facebook" },
-                      { Icon: Instagram, link: "https://www.instagram.com/", label: "Instagram" },
-                      { Icon: Linkedin, link: "https://www.linkedin.com/", label: "LinkedIn" },
-                      { Icon: SiTiktok, link: "https://www.tiktok.com/", label: "TikTok" },
-                      { Icon: Youtube, link: "https://www.youtube.com/", label: "YouTube" },
+                      { Icon: Facebook, link: "https://www.facebook.com/p/CeyLearn-Academy-61560449742239/", label: "Facebook" },
+                      { Icon: Instagram, link: "https://www.instagram.com/ceylearn_academy/", label: "Instagram" },
+                      { Icon: Linkedin, link: "https://www.linkedin.com/company/ceylearn-academy/", label: "LinkedIn" },
+                      { Icon: SiTiktok, link: "https://www.tiktok.com/@ceylearn_academy", label: "TikTok" },
+                      { Icon: Youtube, link: "https://www.youtube.com/@ceyLearnacademy00", label: "YouTube" },
                     ].map(({ Icon, link, label }, index) => (
                       <a
                         key={index}

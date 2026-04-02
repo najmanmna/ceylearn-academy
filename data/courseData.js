@@ -6,11 +6,11 @@ export const allCourses = [
     summary:
       "Learn SEO, SEM, and social media strategies to drive growth for real-world clients.",
     cardImage: "/courses/digital-marketing.png",
-    category: "Technology & IT", // Added category
-    previewVideoId: "BGwX7naqE1Y&t=3s", // Added preview video ID
+    category: "Technology & IT",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/digital-marketing-header.jpg", // A wider banner for the page
+    headerImage: "/courses/digital-marketing.png",
     longDescription:
       "This comprehensive 8-week diploma covers everything you need to become a job-ready digital marketer. We dive deep into SEO, paid advertising, content marketing, and analytics, focusing on hands-on projects you can add to your portfolio.",
     duration: "8 Weeks",
@@ -35,54 +35,69 @@ export const allCourses = [
         description: "Running campaigns on Google, Facebook, and Instagram.",
       },
     ],
-    instructor: {
-      name: "Jane Doe",
-      bio: "Jane is a digital marketing consultant with 10+ years of experience helping brands grow.",
-      image: "/courses/digital-marketing.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "certificate-in-graphic-design",
-    title: "Certificate in Graphic Design",
+    title: "Certificate in Graphic Design & Advertising",
     summary:
-      "Master typography, color theory, and layout to build a stunning design portfolio.",
+      "Master design fundamentals, Photoshop, Illustrator, and Canva to create marketing graphics and social media content.",
     cardImage: "/courses/graphic-design-course.png",
-    category: "Design", // Added category
-    previewVideoId: "BGwX7naqE1Y&t=3s", // Added preview video ID
-
+    category: "Design",
+    previewVideoId: "hZRJFbASUbg",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/graphic-design-header.jpg",
+    headerImage: "/courses/graphic-design-course.png",
     longDescription:
-      "Our 6-week certificate program teaches you the fundamental principles of graphic design. You'll work with industry-standard tools like Adobe Photoshop, Illustrator, and Figma to create 5 real-world projects.",
-    duration: "6 Weeks",
+      "The Certificate in Graphic Design & Advertising is a short-term practical program designed to introduce students to the fundamentals of graphic design and digital advertising. This course focuses on basic design principles, creative tools, and practical design techniques required to create marketing graphics and social media content. Students will learn how to design posters, flyers, logos, and social media visuals using modern design tools. Through live demonstrations and hands-on exercises, learners will gain practical experience and develop a beginner-level design portfolio suitable for entry-level freelance or creative work.",
+    duration: "15 Days",
     level: "Beginner",
     whatYouWillLearn: [
-      "Design principles (Color, Typography, Layout)",
-      "How to use Adobe Photoshop & Illustrator",
-      "Creating logos and brand identities",
-      "UI/UX design fundamentals with Figma",
+      "Design fundamentals: elements, principles, layout & composition",
+      "Colour theory, typography, and design hierarchy",
+      "Create social media posts, posters, and flyers using Canva",
+      "Edit images and design posters with Adobe Photoshop",
+      "Design logos and brand identities with Adobe Illustrator",
+      "Create promotional videos using CapCut",
+      "Build a beginner design portfolio and learn freelancing basics",
     ],
     modules: [
       {
-        title: "Module 1: Design Fundamentals",
-        description: "Color theory, typography, and composition.",
+        title: "Module 1: Introduction to Graphic Design",
+        description:
+          "Introduction to graphic design, role of design in advertising, types of graphic design, elements and principles of design, layout & composition basics.",
       },
       {
-        title: "Module 2: Adobe Photoshop",
-        description: "Photo manipulation and digital art.",
+        title: "Module 2: Colour & Typography",
+        description:
+          "Colour theory and colour combinations, typography basics, font types and readability, design hierarchy.",
       },
       {
-        title: "Module 3: Adobe Illustrator",
-        description: "Vector art, logos, and icons.",
+        title: "Module 3: Social Media Design Tools",
+        description:
+          "Introduction to Canva, templates and layouts, designing social media posts, poster and flyer design basics.",
+      },
+      {
+        title: "Module 4: Adobe Photoshop Basics",
+        description:
+          "Photoshop interface overview, basic image editing, background removal, poster design practice, photo manipulation basics.",
+      },
+      {
+        title: "Module 5: Logo & Branding Basics",
+        description:
+          "Introduction to Adobe Illustrator, vector graphics basics, shapes and tools, logo design basics, simple brand identity design.",
+      },
+      {
+        title: "Module 6: Digital Content Creation",
+        description:
+          "Social media marketing graphics, Facebook & Instagram post design, video editing basics using CapCut, creating simple promotional videos.",
+      },
+      {
+        title: "Module 7: Portfolio & Freelancing Basics",
+        description:
+          "Portfolio development, organizing design work, pricing design services, introduction to freelancing, finding design clients, final design project and presentation.",
       },
     ],
-    instructor: {
-      name: "Mark Johnson",
-      bio: "Mark is a freelance brand designer and illustrator with a passion for teaching.",
-      image: "/images/instructors/mark-johnson.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
@@ -91,12 +106,11 @@ export const allCourses = [
     summary:
       "Learn to take and edit professional photos using just your smartphone.",
     cardImage: "/courses/mobile-photography.png",
-    category: "Creative Arts", // Added category
-    previewVideoId: "BGwX7naqE1Y&t", // Added preview video ID
-
+    category: "Creative Arts",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/mobile-photography-header.jpg",
+    headerImage: "/courses/mobile-photography.png",
     longDescription:
       "This 4-week course unlocks the power of your phone's camera. We'll cover composition, lighting, editing apps, and how to create stunning images for social media or personal projects.",
     duration: "4 Weeks",
@@ -121,11 +135,6 @@ export const allCourses = [
         description: "Post-processing with mobile apps.",
       },
     ],
-    instructor: {
-      name: "Anil Perera",
-      bio: "Anil is a professional photographer specializing in mobile-first content creation.",
-      image: "/images/instructors/anil-perera.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
@@ -134,10 +143,11 @@ export const allCourses = [
     summary:
       "Master Word, Excel, and PowerPoint to boost your productivity in any office environment.",
     cardImage: "/courses/ms-office.png",
-    category: "Technology & IT", // Added category
+    category: "Technology & IT",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/ms-office-header.jpg",
+    headerImage: "/courses/ms-office.png",
     longDescription:
       "Become an office superstar. This 3-week certificate focuses on the essential skills in Microsoft Office. You'll learn to create professional documents, build insightful spreadsheets, and deliver engaging presentations.",
     duration: "3 Weeks",
@@ -162,93 +172,123 @@ export const allCourses = [
         description: "Creating impactful presentations.",
       },
     ],
-    instructor: {
-      name: "David Lee",
-      bio: "David is a certified Microsoft Trainer with 15 years of corporate training experience.",
-      image: "/images/instructors/david-lee.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "diploma-in-graphic-design-advertising",
-    title: "Diploma in Graphic Design and Advertising",
+    title: "Diploma in Graphic Design & Advertising",
     summary:
-      "Go beyond design. Learn to create visuals that solve business problems and drive campaigns.",
+      "A comprehensive program covering design principles, Adobe tools, branding, and digital marketing to build a professional design portfolio.",
     cardImage: "/courses/graphic-design-ad.png",
-    category: "Design", // Added category
+    category: "Design",
+    previewVideoId: "hZRJFbASUbg",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/graphic-adv-header.jpg",
+    headerImage: "/courses/graphic-design-ad.png",
     longDescription:
-      "This advanced 12-week diploma bridges the gap between design and marketing. You'll master Adobe Creative Suite, but also learn campaign strategy, copywriting, and how to create cohesive advertising materials from print to digital.",
-    duration: "12 Weeks",
-    level: "Intermediate",
+      "The Diploma in Graphic Design & Advertising is a comprehensive program designed to help students develop creative and professional skills in digital design, branding, and advertising. This course covers design principles, professional software tools, branding strategies, and digital marketing basic concepts to prepare learners for careers in graphic design, digital media, and freelance design services. Students will gain hands-on practical experience while building a professional design portfolio through real-world projects.",
+    duration: "4 Months (16 Weeks)",
+    level: "Beginner to Advanced",
     whatYouWillLearn: [
-      "Advanced Adobe Illustrator & Photoshop",
-      "Advertising campaign concepts and strategy",
-      "Brand identity and logo systems",
-      "Portfolio development for ad agencies",
+      "IT & digital basics including Microsoft Office and internet fundamentals",
+      "Design principles: typography, colour theory, layout & composition",
+      "Adobe Photoshop, Illustrator, InDesign, and CorelDRAW",
+      "Logo design, branding & identity, poster and advertising design",
+      "Product packaging, magazine layout, and mockup presentation",
+      "Video editing fundamentals and portfolio development",
+      "Social media marketing, Meta Ads basics, and freelancing",
     ],
     modules: [
       {
-        title: "Module 1: Advanced Design Principles",
-        description: "Typography, color, and layout for advertising.",
+        title: "Module 1: IT & Digital Basics",
+        description:
+          "Introduction to computers & IT, operating system basics, file management, Microsoft Word & Google Docs, PowerPoint basics, internet fundamentals, email communication, cyber security awareness.",
       },
       {
-        title: "Module 2: Campaign Strategy",
-        description: "Understanding the brief and target audience.",
+        title: "Module 2: Foundations of Graphic Design",
+        description:
+          "Introduction to graphic design, elements & principles of design, typography basics, colour theory, layout & composition, Adobe Photoshop basics, image editing techniques.",
       },
       {
-        title: "Module 3: Executing the Campaign",
-        description: "Creating print, digital, and social ads.",
+        title: "Module 3: Professional Graphic Design",
+        description:
+          "Adobe Illustrator, Adobe InDesign, CorelDRAW basics, logo design, branding & identity design, poster & advertising design, digital illustration, product packaging design, magazine layout design, business card & stationery design, mockups & presentation.",
+      },
+      {
+        title: "Module 4: Advanced Design & Marketing",
+        description:
+          "Video editing fundamentals, portfolio development, freelancing & pricing design services, social media marketing, Meta Ads basics, client project development, final design presentation.",
       },
     ],
-    instructor: {
-      name: "Mark Johnson",
-      bio: "Mark is a freelance brand designer and illustrator with a passion for teaching.",
-      image: "/images/instructors/mark-johnson.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "certificate-in-mehandi-artistry",
-    title: "Certificate in Mehandi Artistry",
+    title: "Certificate in Mehendi Artistry",
     summary:
-      "Master the art of traditional and modern henna design, from cone preparation to client work.",
+      "An 8-week practical program covering floral, paisley, traditional, and regional Mehendi styles from basics to bridal mastery.",
     cardImage: "/courses/henna.png",
-    category: "Creative Arts", // Added category
+    category: "Creative Arts",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
     headerImage: "/courses/henna.png",
     longDescription:
-      "Turn your passion for henna into a profession. This 5-week course covers everything from making the perfect henna paste to mastering intricate bridal designs and simple, modern motifs.",
-    duration: "5 Weeks",
-    level: "Beginner",
+      "The Certificate in Mehendi Artistry by CeyLearn Academy (Pvt) Ltd is an 8-week practical program designed to teach students the fundamentals and advanced techniques of Mehendi design. This course guides learners from basic elements to intricate bridal designs, covering floral, paisley, traditional, and regional Mehendi styles. Through hands-on exercises, live demonstrations, and project work, students will gain the skills needed to create professional Mehendi designs and develop confidence in artistic application.",
+    duration: "8 Weeks (16 Sessions)",
+    level: "Beginner to Intermediate",
     whatYouWillLearn: [
-      "Proper cone making and handling",
-      "Traditional Indian & Arabic designs",
-      "Modern and minimalist motifs",
-      "Tips for starting your own henna business",
+      "Henna cone handling, pressure control, and basic elements",
+      "Floral compositions with shading techniques for leaves and petals",
+      "Paisley drawing, leafy designs, and portfolio building",
+      "Mandala design, peacock motifs, and traditional Indian elements",
+      "Reverse negative techniques, finger and border designs",
+      "Advanced florals, Jhumka motifs, and full-hand Arabic designs",
+      "Gulf, Arabic, Indian, and Moroccan regional styles",
+      "Heavy bridal Mehendi incorporating multiple regional styles",
     ],
     modules: [
       {
-        title: "Module 1: The Basics",
-        description: "Paste mixing, cone control, and basic elements.",
+        title: "Module 1: Introduction & Foundations",
+        description:
+          "Henna cone handling and pressure control, basic elements (dots, lines, curves, spirals), filler techniques & grid-based practice, daily practice sheets for precision.",
       },
       {
-        title: "Module 2: Bridal & Traditional",
-        description: "Mastering complex, full-hand designs.",
+        title: "Module 2: Floral Basics",
+        description:
+          "Centre of flowers & types of flowers, shading techniques for leaves and petals, combining flowers, leaves, and fillers into compositions.",
       },
       {
-        title: "Module 3: Modern & Business",
-        description: "White henna, glitter, and client management.",
+        title: "Module 3: Paisleys & Basic Designs",
+        description:
+          "Paisley drawing and decoration, leafy design integration, daily practice & portfolio building.",
+      },
+      {
+        title: "Module 4: Traditional Indian Elements",
+        description:
+          "Mandala design basics & peacock motifs, vine patterns & connecting designs, half-hand Indian designs combining mandalas, paisleys, and florals.",
+      },
+      {
+        title: "Module 5: Detailing & Reversing",
+        description:
+          "Reverse negative techniques, finger and border designs, floral variations for intricate detailing.",
+      },
+      {
+        title: "Module 6: Advanced Florals & Accessories",
+        description:
+          "Jhumka (earring) motifs & advanced floral compositions, full-hand Arabic floral designs, cumulative assessment (Week 3–5 techniques).",
+      },
+      {
+        title: "Module 7: Regional Styles",
+        description:
+          "Gulf style (bold & spaced), Arabic style (flowy & floral), Indian style (dense & detailed), Moroccan style (geometric patterns), daily practice to master multiple regional techniques.",
+      },
+      {
+        title: "Module 8: Bridal Mastery & Final Project",
+        description:
+          "Small bridal design practice combining regional styles, heavy bridal design (full-hand, up to wrist/arm), final project: complete bridal Mehendi incorporating florals, paisleys, borders, and regional motifs, certificate evaluation and project feedback.",
       },
     ],
-    instructor: {
-      name: "Fathima Rizvi",
-      bio: "Fathima is a renowned Mehandi artist with over 8 years of bridal experience.",
-      image: "/images/instructors/fathima-rizvi.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
@@ -257,10 +297,11 @@ export const allCourses = [
     summary:
       "Learn to design, craft, and manage stunning events, from custom decor to flawless execution.",
     cardImage: "/courses/event-planning.png",
-    category: "Creative Arts", // Added category
+    category: "Creative Arts",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/courses/event-planning.jpg",
+    headerImage: "/courses/event-planning.png",
     longDescription:
       "This 6-week course combines creativity with logistics. You'll learn to plan events like weddings and parties, and also how to create the custom craft elements (like centerpieces and backdrops) that make them unique.",
     duration: "6 Weeks",
@@ -285,11 +326,6 @@ export const allCourses = [
         description: "Finding clients and running an event.",
       },
     ],
-    instructor: {
-      name: "Aisha Mohamed",
-      bio: "Aisha runs a successful event planning and decor business in Colombo.",
-      image: "/images/instructors/aisha-mohamed.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
@@ -298,10 +334,11 @@ export const allCourses = [
     summary:
       "Become a professional makeup artist specializing in bridal and special occasion looks.",
     cardImage: "/courses/bridal.png",
-    category: "Creative Arts", // Added category
+    category: "Creative Arts",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/bridal-makeup-header.jpg",
+    headerImage: "/courses/bridal.png",
     longDescription:
       "This intensive 4-week course provides hands-on training in bridal makeup. You'll learn skin prep, color matching, and techniques for creating flawless, long-lasting looks for brides and bridal parties.",
     duration: "4 Weeks",
@@ -326,96 +363,224 @@ export const allCourses = [
         description: "Building your kit and finding clients.",
       },
     ],
-    instructor: {
-      name: "Sarah Khan",
-      bio: "Sarah is a professional MUA with a portfolio of over 100 brides.",
-      image: "/images/instructors/sarah-khan.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "diploma-in-henna-mixology",
-    title: "Diploma in Henna and Mixology",
+    title: "Diploma in Henna & Mixology",
     summary:
-      "An advanced diploma exploring complex henna designs and the art of mixing 'jagua' and other mediums.",
+      "A 3-month hands-on program mastering professional henna artistry, creative design patterns, henna product preparation, and business management.",
     cardImage: "/courses/henna-mixology.png",
-    category: "Creative Arts", // Added category
+    category: "Creative Arts",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/henna-mixology-header.jpg",
+    headerImage: "/courses/henna-mixology.png",
     longDescription:
-      "Go beyond basic henna. This 8-week diploma is for artists who want to stand out. We explore 'jagua' henna for realistic tattoo-like designs, white henna, glitter, and advanced mixology techniques to create unique, signature styles.",
-    duration: "8 Weeks",
-    level: "Intermediate",
+      "The Diploma in Henna & Mixology by CeyLearn Academy (Pvt) Ltd is a 3-month hands-on practical program designed for learners who want to master professional henna artistry and mixology. This comprehensive course covers basic to advanced henna techniques, creative design patterns, and henna product preparation, along with business and client management. Students will gain practical experience in bridal and thematic designs, color mixing, and commercial henna cone creation, culminating in a professional henna portfolio.",
+    duration: "3 Months",
+    level: "Beginner to Advanced",
     whatYouWillLearn: [
-      "Advanced portrait and realism henna",
-      "Mixing and applying 'jagua' gel",
-      "Creating and using white henna",
-      "Developing a unique artistic style",
+      "Henna tools, materials, and basic pattern elements",
+      "Floral & vine designs and Gulf style patterns",
+      "Indo-Arabic, Moroccan, Indian styles and heavy bridal hand designs",
+      "Advanced thematic designs: peacock, portrait, and special occasion motifs",
+      "Prepare professional henna cones in multiple types and colours",
+      "Aftercare balm, sealant sprays, cone sealing, and packaging",
+      "Business tips, pricing, client handling, and portfolio creation",
     ],
     modules: [
       {
-        title: "Module 1: Advanced Henna Art",
-        description: "Detailed portraiture and shading.",
+        title: "Module 1: Introduction to Henna & Basic Elements (Classes 1–3)",
+        description:
+          "History and cultural importance of henna, tools and materials introduction, basic elements (borders, grids, flower centers, mandalas).",
       },
       {
-        title: "Module 2: Jagua & Modern Mixes",
-        description: "Working with new mediums for temporary tattoos.",
+        title: "Module 2: Floral & Vine Designs (Classes 4–6)",
+        description:
+          "Flower formation techniques and advanced floral designs, vines and connecting patterns, Gulf style design.",
       },
       {
-        title: "Module 3: Signature Style",
-        description: "Building your brand as an artist.",
+        title: "Module 3: Intermediate Henna Styles (Classes 7–10)",
+        description:
+          "Indo-Arabic designs, negative filling techniques, finger designs, Moroccan & Indian traditional designs, heavy bridal hand designs.",
+      },
+      {
+        title: "Module 4: Advanced & Thematic Designs (Classes 11–15)",
+        description:
+          "Leg designs, peacock patterns, musical instrument patterns, portraits & elephants, baby shower / Jhumka / Mangi designs, start-up design composition.",
+      },
+      {
+        title: "Module 5: Henna Mixology & Product Preparation (Classes 16–18)",
+        description:
+          "Luxury, budget, practice, permanent nail, acrylic, and glitter henna cones, colored henna cones (Red, Blue, White, Yellow, Green).",
+      },
+      {
+        title: "Module 6: Henna Products & Aftercare (Classes 19–20)",
+        description:
+          "Aftercare balm preparation & sealant sprays, cone sealing and packaging, choosing the best henna powder.",
+      },
+      {
+        title: "Module 7: Business & Client Handling (Classes 21–22)",
+        description:
+          "Business tips and marketing strategies, pricing, client handling, and bookings, portfolio creation.",
+      },
+      {
+        title: "Module 8: Practical Assessment & Final Project (Classes 23–24)",
+        description:
+          "Final hands-on assessment, bridal design project, portfolio evaluation.",
       },
     ],
-    instructor: {
-      name: "Fathima Rizvi",
-      bio: "Fathima is a renowned Mehandi artist with over 8 years of bridal experience.",
-      image: "/images/instructors/fathima-rizvi.png",
-    },
   },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "diploma-in-cake-making-decoration",
-    title: "Diploma in Cake making and Decoration",
+    title: "Diploma in Cake Decorating",
     summary:
-      "From baking fundamentals to advanced sugarcraft, become a professional cake artist.",
+      "A 3-month practical program covering buttercream, fondant, sugar art, specialty cakes, and modern decorating techniques.",
     cardImage: "/courses/cake.png",
-    category: "Creative Arts", // Added category
+    category: "Creative Arts",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
     // --- (Schema 2) Data for Course Page ---
-    headerImage: "/images/courses/cake-diploma-header.jpg",
+    headerImage: "/courses/cake.png",
     longDescription:
-      "This 10-week diploma is a complete guide to professional cake artistry. You'll learn baking science, how to make various icings, and master decoration techniques from simple piping to complex sugar flowers and tiered wedding cakes.",
-    duration: "10 Weeks",
-    level: "All Levels",
+      "The Diploma in Cake Decorating by CeyLearn Academy (Pvt) Ltd is a 3-month practical program designed to equip students with professional skills in cake preparation, decoration techniques, and creative cake design. The course emphasizes hands-on training in buttercream, fondant, piping, sugar art, and specialty cakes, covering modern cake styles widely used in professional bakeries and home baking businesses. Students will gain practical experience and the confidence to create bakery-quality cakes, cupcakes, and signature designs.",
+    duration: "3 Months (Approx. 72 Hours)",
+    level: "Beginner to Intermediate",
     whatYouWillLearn: [
-      "Baking science and perfect cake recipes",
-      "Buttercream and fondant techniques",
-      "Piping, stacking, and internal support",
-      "Sugar flower and figurine modeling",
+      "Cake fundamentals: measuring, baking, crumb coating, and sharp edges",
+      "Buttercream, whipping cream, cream cheese frosting, and royal icing",
+      "Floral buttercream piping and smooth finishing techniques",
+      "Fondant basics, 2-tier cakes, sugar flowers, and edible decorations",
+      "Specialty cakes: Red Velvet, Black Forest, Cheesecake, and more",
+      "Modern techniques: chocolate drip, Ombre, Fault Line, Geode, Marble effect",
+      "Cupcake varieties and building a professional cake portfolio",
     ],
     modules: [
       {
-        title: "Module 1: Baking & Icing",
-        description: "The foundation of a perfect cake.",
+        title: "Module 1: Cake Fundamentals & Ingredients (2 Weeks)",
+        description:
+          "Introduction to cake ingredients, measuring, baking, and basic cake preparation, cake slicing, crumb coating, and full coating techniques, achieving sharp edges. Practical: butter cake, basic sponge cake.",
       },
       {
-        title: "Module 2: Basic Decoration",
-        description: "Piping, borders, and fondant covering.",
+        title: "Module 2: Creams, Frostings & Piping (3 Weeks)",
+        description:
+          "Buttercream handling: hard & soft icing, chocolate, coffee cream, whipping cream, cream cheese frosting, royal icing, floral buttercream piping & creative exercises. Practical: frosting, smooth finishing, and floral cake decoration.",
       },
       {
-        title: "Module 3: Advanced Sugarcraft",
-        description: "Tiered cakes, sugar flowers, and modeling.",
+        title: "Module 3: Fondant & Sugar Art (3 Weeks)",
+        description:
+          "Fondant basics & 2-tier cake techniques, modeling paste, edible gum paste, non-melting gum paste, sugar flowers (Rose, Peony) and edible glue preparation, sugar lace fondant designs. Practical: fondant cake covering, sugar flower creation, and decorative toppers.",
+      },
+      {
+        title: "Module 4: Specialty Cakes (3 Weeks)",
+        description:
+          "Chocolate, Red Velvet, Coffee, Ribbon, Black Forest, Swiss Roll, Pineapple Gateaux, Cheesecake, Butterscotch, Dark Chocolate Mousse. Practical: cake layering, filling, and specialty cake finishing.",
+      },
+      {
+        title: "Module 5: Modern Cake Decorating Techniques (3 Weeks)",
+        description:
+          "Chocolate ganache & white chocolate ganache, chocolate drip, Ombre, Fault Line, Geode, Marble effect cakes, edible moss & realistic 3D cake designs, wedding cake structures, chocolate tempering & garnishes. Practical: modern cake projects with professional finishing.",
+      },
+      {
+        title: "Module 6: Cupcakes & Final Creative Project (1 Week)",
+        description:
+          "Four varieties of cupcakes & decoration styles, floral buttercream piping techniques. Final practical: designing and presenting a fully decorated cake.",
       },
     ],
-    instructor: {
-      name: "Nadiya Silva",
-      bio: "Nadiya is an award-winning cake decorator and owner of a boutique bakery.",
-      image: "/images/instructors/nadiya-silva.png",
-    },
+  },
+  {
+    // --- (Schema 1) Data for Course Card ---
+    slug: "professional-certificate-social-media-marketing",
+    title: "Professional Certificate in Social Media Marketing & Management",
+    summary:
+      "A 3-month practical program covering content creation, paid advertising, analytics, and freelancing to launch a career in social media marketing.",
+    cardImage: "/courses/social-media-marketing.png",
+    category: "Technology & IT",
+    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
+
+    // --- (Schema 2) Data for Course Page ---
+    headerImage: "/courses/social-media-marketing.png",
+    longDescription:
+      "The Professional Certificate in Social Media Marketing & Management by CeyLearn Academy (Pvt) Ltd is a 3-month practical program designed to prepare students for careers in social media marketing, management, and freelancing. The course combines foundational knowledge, content creation, paid advertising, analytics, and client handling, with hands-on exercises and real-world projects. Students will graduate job-ready and income-ready, with a professional portfolio showcasing their social media expertise.",
+    duration: "3 Months (12 Weeks / 24 Classes)",
+    level: "Beginner to Intermediate",
+    whatYouWillLearn: [
+      "Digital marketing fundamentals and professional career roadmap",
+      "Market research, target audience psychology, and niche selection",
+      "Professional business communication and client psychology",
+      "Content strategy, brand positioning, and 30-day content planning",
+      "Canva design, short-form video creation, captions, and hashtags",
+      "Social media management, community handling, and automation basics",
+      "Meta Ads: campaign setup, audience targeting, and optimization",
+      "Analytics, KPI tracking, and professional client reporting",
+      "Freelancing platforms, pricing strategies, and client acquisition",
+    ],
+    modules: [
+      {
+        title: "Module 1: Introduction to Social Media Marketing Profession",
+        description:
+          "Overview of digital marketing & social media marketing, professional roles & career paths, career & income roadmap assignment, confidence building exercises.",
+      },
+      {
+        title: "Module 2: Market Research & Profitable Niche Selection",
+        description:
+          "Target audience psychology & buyer personas, competitor analysis, profitable niche validation. Assignment: niche research report.",
+      },
+      {
+        title: "Module 3: Professional Communication & Client Psychology",
+        description:
+          "Business communication basics, client needs, objection handling, and role-play exercises, presentation & speaking confidence.",
+      },
+      {
+        title: "Module 4: Google Workspace for Marketing Professionals",
+        description:
+          "Google Docs, Slides, and Sheets for proposals, reports, content calendars, hands-on activities: client proposals and content tracking.",
+      },
+      {
+        title: "Module 5: Content Strategy & Brand Positioning",
+        description:
+          "Content pillars, brand tone & voice, CTA frameworks & content calendar creation. Assignment: 30-day content strategy.",
+      },
+      {
+        title: "Module 6: Graphic & Video Content Creation",
+        description:
+          "Canva advanced tools & short-form video strategy, caption and hashtag optimization. Assignment: 10 posts + 3 reels.",
+      },
+      {
+        title: "Module 7: Social Media Management & Community Handling",
+        description:
+          "Page/account management, DM & comment handling, automation basics & crisis management. Assignment: DM & response templates.",
+      },
+      {
+        title: "Module 8: Paid Advertising (Meta Ads Foundation)",
+        description:
+          "Meta Ads ecosystem & campaign objectives, audience targeting, budgeting & ad structure. Assignment: setup dummy/real ad campaign.",
+      },
+      {
+        title: "Module 9: Advanced Ads, Conversions & Funnels",
+        description:
+          "Creative testing, ad copywriting & funnels, optimization techniques & scaling ads. Assignment: ad creatives & copy set.",
+      },
+      {
+        title: "Module 10: Analytics & Professional Reporting",
+        description:
+          "KPIs, metrics & social media analytics dashboards, client reporting formats & performance analysis. Assignment: performance report (Google Sheets + Slides).",
+      },
+      {
+        title: "Module 11: Freelancing, Pricing & Soft Skills",
+        description:
+          "Freelancing platforms & profile optimization, pricing strategies & client acquisition, communication, negotiation & time management. Assignment: create freelance profile + proposals.",
+      },
+      {
+        title: "Module 12: Final Project & Professional Portfolio",
+        description:
+          "Hands-on final project: brand/page management, content creation, paid ads execution, final project presentation & portfolio review.",
+      },
+    ],
   },
 ];
 
 // Define the categories in the order you want them to appear
 export const categories = ["Technology & IT", "Design", "Creative Arts"];
-

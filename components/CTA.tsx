@@ -36,13 +36,15 @@ const CtaSection = () => {
           </p>
           
           {/* Button */}
-          <button 
+          <a href="/contact">  <button 
+            
             className="bg-brand_orange text-white font-bold px-8 py-3 rounded-md 
                        text-lg transition-colors duration-300
                        hover:bg-orange-600"
           >
             INQUIRE NOW
-          </button>
+          </button></a>
+        
         </div>
       </div>
     </section>

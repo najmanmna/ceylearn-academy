@@ -24,6 +24,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Ceylearn Academy",
   description: "Welcome to Ceylearn Academy",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
