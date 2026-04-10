@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react"; // Added useMemo for optimization
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,23 +21,45 @@ export default function CoursesPage() {
   const programTypes = ["All", "Diploma", "Certificate"];
 
   // --- Filtering Logic ---
-  const filteredCourses = coursesData.filter((course) => {
-    // 1. Category Match
-    const matchesCategory =
-      selectedCategory === "All" || course.category === selectedCategory;
+  // We use useMemo to re-run filtering and sorting only when inputs change
+  const filteredAndSortedCourses = useMemo(() => {
+    // 1. First, apply existing filtering logic
+    const filtered = coursesData.filter((course) => {
+      // 1a. Category Match
+      const matchesCategory =
+        selectedCategory === "All" || course.category === selectedCategory;
 
-    // 2. Type Match (Check if title contains "Diploma" or "Certificate")
-    const matchesType =
-      selectedType === "All" ||
-      course.title.toLowerCase().includes(selectedType.toLowerCase());
+      // 1b. Type Match (Check if title contains "Diploma" or "Certificate")
+      const matchesType =
+        selectedType === "All" ||
+        course.title.toLowerCase().includes(selectedType.toLowerCase());
 
-    // 3. Search Match
-    const matchesSearch = course.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
+      // 1c. Search Match
+      const matchesSearch = course.title
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
 
-    return matchesCategory && matchesType && matchesSearch;
-  });
+      return matchesCategory && matchesType && matchesSearch;
+    });
+
+    // 2. NEW LOGIC: Apply Priority Sorting (Always keep 'Technology' on top)
+    // We create a new array to avoid mutating the filtered one
+    return [...filtered].sort((a, b) => {
+      const priorityCategory = "Technology & IT"; // Define the category that gets top billing
+
+      // Optimization: Check exact string match
+      const aIsPriority = a.category === priorityCategory;
+      const bIsPriority = b.category === priorityCategory;
+
+      if (aIsPriority && !bIsPriority) {
+        return -1; // a comes first
+      } else if (!aIsPriority && bIsPriority) {
+        return 1; // b comes first
+      } else {
+        return 0; // Both are 'Technology' or both are not, keep relative order
+      }
+    });
+  }, [selectedCategory, selectedType, searchQuery]); // Re-run when these values change
 
   // --- Handlers ---
   const handleCategoryChange = (category: string) => {
@@ -157,9 +179,11 @@ export default function CoursesPage() {
                 isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
               }`}
             >
-              {filteredCourses.length > 0 ? (
+              {/* === UPDATED: Use useMemo result array === */}
+              {filteredAndSortedCourses.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {filteredCourses.map((course) => (
+                  {/* === UPDATED: Map over sorted array === */}
+                  {filteredAndSortedCourses.map((course) => (
                     <CourseCard
                       key={course.slug}
                       slug={course.slug}
@@ -206,4 +230,4 @@ export default function CoursesPage() {
       <Footer />
     </div>
   );
-}
+} 

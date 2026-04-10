@@ -9,10 +9,10 @@ import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react"; // Make sure y
 const slides = [
   {
     image: "/hero1.png", // The enhanced split image
-    title: "MASTER YOUR CRAFT",
-    subtitle: "EMPOWER YOUR FUTURE",
+    title: "Master Your Craft",
+    subtitle: "Empower Your Future",
     description:
-      "EXPLORE EXPERT-LED COURSES IN TECHNOLOGY, DESIGN & CREATIVE ARTS",
+      "Explore expert-led courses in technology, design & creative arts",
     buttons: [
       { text: "EXPLORE COURSES", href: "/courses", primary: true },
       { text: "INQUIRE NOW", href: "/contact", primary: false },
@@ -20,10 +20,10 @@ const slides = [
   },
   {
     image: "/hero2.png", // Example: A dedicated image for Design & IT courses
-    title: "INNOVATE WITH DESIGN",
-    subtitle: "EXCEL IN IT SOLUTIONS",
+    title: "Innovate With Design",
+    subtitle: "Excel in IT Solutions",
     description:
-      "HANDS-ON DIPLOMAS IN GRAPHIC DESIGN, DIGITAL MARKETING & INFORMATION TECHNOLOGY.",
+      "Hands-on diplomas in graphic design, digital marketing & information technology.",
     buttons: [
       { text: "VIEW ALL COURSES", href: "/courses", primary: true },
       { text: "WHY CEYLEARN?", href: "/about", primary: false },
@@ -31,10 +31,10 @@ const slides = [
   },
   {
     image: "/hero3.png", // Example: A dedicated image for Creative Arts courses
-    title: "UNLEASH YOUR CREATIVITY",
-    subtitle: "MASTER ARTISAN SKILLS",
+    title: "Unleash Your Creativity",
+    subtitle: "Master Artisan Skills",
     description:
-      "FROM BRIDAL MAKEUP & MEHANDI TO CAKE DECORATION & EVENT PLANNING.",
+      "From bridal makeup & mehandi to cake decoration & event planning.",
     buttons: [
       {
         text: "EXPLORE ART COURSES",

@@ -1,41 +1,41 @@
 export const allCourses = [
-  {
-    // --- (Schema 1) Data for Course Card ---
-    slug: "diploma-in-digital-marketing", // The unique ID for the URL
-    title: "Diploma in Digital Marketing",
-    summary:
-      "Learn SEO, SEM, and social media strategies to drive growth for real-world clients.",
-    cardImage: "/courses/digital-marketing.png",
-    category: "Technology & IT",
-    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
+  // {
+  //   // --- (Schema 1) Data for Course Card ---
+  //   slug: "diploma-in-digital-marketing", // The unique ID for the URL
+  //   title: "Diploma in Digital Marketing",
+  //   summary:
+  //     "Learn SEO, SEM, and social media strategies to drive growth for real-world clients.",
+  //   cardImage: "/courses/digital-marketing.png",
+  //   category: "Technology & IT",
+  //   previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
-    // --- (Schema 2) Data for Course Page ---
-    headerImage: "/courses/digital-marketing.png",
-    longDescription:
-      "This comprehensive 8-week diploma covers everything you need to become a job-ready digital marketer. We dive deep into SEO, paid advertising, content marketing, and analytics, focusing on hands-on projects you can add to your portfolio.",
-    duration: "8 Weeks",
-    level: "Intermediate",
-    whatYouWillLearn: [
-      "Master on-page and off-page SEO",
-      "Launch & manage Google Ad campaigns",
-      "Develop a content marketing strategy",
-      "Analyze website traffic with Google Analytics",
-    ],
-    modules: [
-      {
-        title: "Module 1: Introduction to Digital Marketing",
-        description: "Understanding the digital ecosystem and customer journey.",
-      },
-      {
-        title: "Module 2: Search Engine Optimization (SEO)",
-        description: "Keywords, on-page, off-page, and technical SEO.",
-      },
-      {
-        title: "Module 3: Paid Advertising (SEM & Social)",
-        description: "Running campaigns on Google, Facebook, and Instagram.",
-      },
-    ],
-  },
+  //   // --- (Schema 2) Data for Course Page ---
+  //   headerImage: "/courses/digital-marketing.png",
+  //   longDescription:
+  //     "This comprehensive 8-week diploma covers everything you need to become a job-ready digital marketer. We dive deep into SEO, paid advertising, content marketing, and analytics, focusing on hands-on projects you can add to your portfolio.",
+  //   duration: "8 Weeks",
+  //   level: "Intermediate",
+  //   whatYouWillLearn: [
+  //     "Master on-page and off-page SEO",
+  //     "Launch & manage Google Ad campaigns",
+  //     "Develop a content marketing strategy",
+  //     "Analyze website traffic with Google Analytics",
+  //   ],
+  //   modules: [
+  //     {
+  //       title: "Module 1: Introduction to Digital Marketing",
+  //       description: "Understanding the digital ecosystem and customer journey.",
+  //     },
+  //     {
+  //       title: "Module 2: Search Engine Optimization (SEO)",
+  //       description: "Keywords, on-page, off-page, and technical SEO.",
+  //     },
+  //     {
+  //       title: "Module 3: Paid Advertising (SEM & Social)",
+  //       description: "Running campaigns on Google, Facebook, and Instagram.",
+  //     },
+  //   ],
+  // },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "certificate-in-graphic-design",
@@ -136,91 +136,91 @@ export const allCourses = [
       },
     ],
   },
-  {
-    // --- (Schema 1) Data for Course Card ---
-    slug: "certificate-in-ms-office",
-    title: "Certificate in MS Office",
-    summary:
-      "Master Word, Excel, and PowerPoint to boost your productivity in any office environment.",
-    cardImage: "/courses/ms-office.png",
-    category: "Technology & IT",
-    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
+  // {
+  //   // --- (Schema 1) Data for Course Card ---
+  //   slug: "certificate-in-ms-office",
+  //   title: "Certificate in MS Office",
+  //   summary:
+  //     "Master Word, Excel, and PowerPoint to boost your productivity in any office environment.",
+  //   cardImage: "/courses/ms-office.png",
+  //   category: "Technology & IT",
+  //   previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
-    // --- (Schema 2) Data for Course Page ---
-    headerImage: "/courses/ms-office.png",
-    longDescription:
-      "Become an office superstar. This 3-week certificate focuses on the essential skills in Microsoft Office. You'll learn to create professional documents, build insightful spreadsheets, and deliver engaging presentations.",
-    duration: "3 Weeks",
-    level: "All Levels",
-    whatYouWillLearn: [
-      "Advanced formatting in Microsoft Word",
-      "Formulas, VLOOKUP, and Pivot Tables in Excel",
-      "Animation and transitions in PowerPoint",
-      "Efficiently manage data and reports",
-    ],
-    modules: [
-      {
-        title: "Module 1: Microsoft Word",
-        description: "Professional document creation and formatting.",
-      },
-      {
-        title: "Module 2: Microsoft Excel",
-        description: "From formulas to data analysis.",
-      },
-      {
-        title: "Module 3: Microsoft PowerPoint",
-        description: "Creating impactful presentations.",
-      },
-    ],
-  },
-  {
-    // --- (Schema 1) Data for Course Card ---
-    slug: "diploma-in-graphic-design-advertising",
-    title: "Diploma in Graphic Design & Advertising",
-    summary:
-      "A comprehensive program covering design principles, Adobe tools, branding, and digital marketing to build a professional design portfolio.",
-    cardImage: "/courses/graphic-design-ad.png",
-    category: "Design",
-    previewVideoId: "hZRJFbASUbg",
+  //   // --- (Schema 2) Data for Course Page ---
+  //   headerImage: "/courses/ms-office.png",
+  //   longDescription:
+  //     "Become an office superstar. This 3-week certificate focuses on the essential skills in Microsoft Office. You'll learn to create professional documents, build insightful spreadsheets, and deliver engaging presentations.",
+  //   duration: "3 Weeks",
+  //   level: "All Levels",
+  //   whatYouWillLearn: [
+  //     "Advanced formatting in Microsoft Word",
+  //     "Formulas, VLOOKUP, and Pivot Tables in Excel",
+  //     "Animation and transitions in PowerPoint",
+  //     "Efficiently manage data and reports",
+  //   ],
+  //   modules: [
+  //     {
+  //       title: "Module 1: Microsoft Word",
+  //       description: "Professional document creation and formatting.",
+  //     },
+  //     {
+  //       title: "Module 2: Microsoft Excel",
+  //       description: "From formulas to data analysis.",
+  //     },
+  //     {
+  //       title: "Module 3: Microsoft PowerPoint",
+  //       description: "Creating impactful presentations.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   // --- (Schema 1) Data for Course Card ---
+  //   slug: "diploma-in-graphic-design-advertising",
+  //   title: "Diploma in Graphic Design & Advertising",
+  //   summary:
+  //     "A comprehensive program covering design principles, Adobe tools, branding, and digital marketing to build a professional design portfolio.",
+  //   cardImage: "/courses/graphic-design-ad.png",
+  //   category: "Design",
+  //   previewVideoId: "hZRJFbASUbg",
 
-    // --- (Schema 2) Data for Course Page ---
-    headerImage: "/courses/graphic-design-ad.png",
-    longDescription:
-      "The Diploma in Graphic Design & Advertising is a comprehensive program designed to help students develop creative and professional skills in digital design, branding, and advertising. This course covers design principles, professional software tools, branding strategies, and digital marketing basic concepts to prepare learners for careers in graphic design, digital media, and freelance design services. Students will gain hands-on practical experience while building a professional design portfolio through real-world projects.",
-    duration: "4 Months (16 Weeks)",
-    level: "Beginner to Advanced",
-    whatYouWillLearn: [
-      "IT & digital basics including Microsoft Office and internet fundamentals",
-      "Design principles: typography, colour theory, layout & composition",
-      "Adobe Photoshop, Illustrator, InDesign, and CorelDRAW",
-      "Logo design, branding & identity, poster and advertising design",
-      "Product packaging, magazine layout, and mockup presentation",
-      "Video editing fundamentals and portfolio development",
-      "Social media marketing, Meta Ads basics, and freelancing",
-    ],
-    modules: [
-      {
-        title: "Module 1: IT & Digital Basics",
-        description:
-          "Introduction to computers & IT, operating system basics, file management, Microsoft Word & Google Docs, PowerPoint basics, internet fundamentals, email communication, cyber security awareness.",
-      },
-      {
-        title: "Module 2: Foundations of Graphic Design",
-        description:
-          "Introduction to graphic design, elements & principles of design, typography basics, colour theory, layout & composition, Adobe Photoshop basics, image editing techniques.",
-      },
-      {
-        title: "Module 3: Professional Graphic Design",
-        description:
-          "Adobe Illustrator, Adobe InDesign, CorelDRAW basics, logo design, branding & identity design, poster & advertising design, digital illustration, product packaging design, magazine layout design, business card & stationery design, mockups & presentation.",
-      },
-      {
-        title: "Module 4: Advanced Design & Marketing",
-        description:
-          "Video editing fundamentals, portfolio development, freelancing & pricing design services, social media marketing, Meta Ads basics, client project development, final design presentation.",
-      },
-    ],
-  },
+  //   // --- (Schema 2) Data for Course Page ---
+  //   headerImage: "/courses/graphic-design-ad.png",
+  //   longDescription:
+  //     "The Diploma in Graphic Design & Advertising is a comprehensive program designed to help students develop creative and professional skills in digital design, branding, and advertising. This course covers design principles, professional software tools, branding strategies, and digital marketing basic concepts to prepare learners for careers in graphic design, digital media, and freelance design services. Students will gain hands-on practical experience while building a professional design portfolio through real-world projects.",
+  //   duration: "4 Months (16 Weeks)",
+  //   level: "Beginner to Advanced",
+  //   whatYouWillLearn: [
+  //     "IT & digital basics including Microsoft Office and internet fundamentals",
+  //     "Design principles: typography, colour theory, layout & composition",
+  //     "Adobe Photoshop, Illustrator, InDesign, and CorelDRAW",
+  //     "Logo design, branding & identity, poster and advertising design",
+  //     "Product packaging, magazine layout, and mockup presentation",
+  //     "Video editing fundamentals and portfolio development",
+  //     "Social media marketing, Meta Ads basics, and freelancing",
+  //   ],
+  //   modules: [
+  //     {
+  //       title: "Module 1: IT & Digital Basics",
+  //       description:
+  //         "Introduction to computers & IT, operating system basics, file management, Microsoft Word & Google Docs, PowerPoint basics, internet fundamentals, email communication, cyber security awareness.",
+  //     },
+  //     {
+  //       title: "Module 2: Foundations of Graphic Design",
+  //       description:
+  //         "Introduction to graphic design, elements & principles of design, typography basics, colour theory, layout & composition, Adobe Photoshop basics, image editing techniques.",
+  //     },
+  //     {
+  //       title: "Module 3: Professional Graphic Design",
+  //       description:
+  //         "Adobe Illustrator, Adobe InDesign, CorelDRAW basics, logo design, branding & identity design, poster & advertising design, digital illustration, product packaging design, magazine layout design, business card & stationery design, mockups & presentation.",
+  //     },
+  //     {
+  //       title: "Module 4: Advanced Design & Marketing",
+  //       description:
+  //         "Video editing fundamentals, portfolio development, freelancing & pricing design services, social media marketing, Meta Ads basics, client project development, final design presentation.",
+  //     },
+  //   ],
+  // },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "certificate-in-mehandi-artistry",
@@ -327,111 +327,111 @@ export const allCourses = [
       },
     ],
   },
-  {
-    // --- (Schema 1) Data for Course Card ---
-    slug: "certificate-in-bridal-makeup",
-    title: "Certificate in Bridal Makeup",
-    summary:
-      "Become a professional makeup artist specializing in bridal and special occasion looks.",
-    cardImage: "/courses/bridal.png",
-    category: "Creative Arts",
-    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
+  // {
+  //   // --- (Schema 1) Data for Course Card ---
+  //   slug: "certificate-in-bridal-makeup",
+  //   title: "Certificate in Bridal Makeup",
+  //   summary:
+  //     "Become a professional makeup artist specializing in bridal and special occasion looks.",
+  //   cardImage: "/courses/bridal.png",
+  //   category: "Creative Arts",
+  //   previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
-    // --- (Schema 2) Data for Course Page ---
-    headerImage: "/courses/bridal.png",
-    longDescription:
-      "This intensive 4-week course provides hands-on training in bridal makeup. You'll learn skin prep, color matching, and techniques for creating flawless, long-lasting looks for brides and bridal parties.",
-    duration: "4 Weeks",
-    level: "Beginner",
-    whatYouWillLearn: [
-      "Skincare and skin prep for makeup",
-      "Color theory and foundation matching",
-      "Techniques for eye, lip, and contour",
-      "Business and hygiene standards",
-    ],
-    modules: [
-      {
-        title: "Module 1: The Bridal Base",
-        description: "Creating a flawless, long-lasting canvas.",
-      },
-      {
-        title: "Module 2: Bridal Eye & Lip",
-        description: "Smokey, classic, and glamorous eye looks.",
-      },
-      {
-        title: "Module 3: The Business",
-        description: "Building your kit and finding clients.",
-      },
-    ],
-  },
-  {
-    // --- (Schema 1) Data for Course Card ---
-    slug: "diploma-in-henna-mixology",
-    title: "Diploma in Henna & Mixology",
-    summary:
-      "A 3-month hands-on program mastering professional henna artistry, creative design patterns, henna product preparation, and business management.",
-    cardImage: "/courses/henna-mixology.png",
-    category: "Creative Arts",
-    previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
+  //   // --- (Schema 2) Data for Course Page ---
+  //   headerImage: "/courses/bridal.png",
+  //   longDescription:
+  //     "This intensive 4-week course provides hands-on training in bridal makeup. You'll learn skin prep, color matching, and techniques for creating flawless, long-lasting looks for brides and bridal parties.",
+  //   duration: "4 Weeks",
+  //   level: "Beginner",
+  //   whatYouWillLearn: [
+  //     "Skincare and skin prep for makeup",
+  //     "Color theory and foundation matching",
+  //     "Techniques for eye, lip, and contour",
+  //     "Business and hygiene standards",
+  //   ],
+  //   modules: [
+  //     {
+  //       title: "Module 1: The Bridal Base",
+  //       description: "Creating a flawless, long-lasting canvas.",
+  //     },
+  //     {
+  //       title: "Module 2: Bridal Eye & Lip",
+  //       description: "Smokey, classic, and glamorous eye looks.",
+  //     },
+  //     {
+  //       title: "Module 3: The Business",
+  //       description: "Building your kit and finding clients.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   // --- (Schema 1) Data for Course Card ---
+  //   slug: "diploma-in-henna-mixology",
+  //   title: "Diploma in Henna & Mixology",
+  //   summary:
+  //     "A 3-month hands-on program mastering professional henna artistry, creative design patterns, henna product preparation, and business management.",
+  //   cardImage: "/courses/henna-mixology.png",
+  //   category: "Creative Arts",
+  //   previewUrl: "https://www.youtube.com/@ceyLearnacademy00",
 
-    // --- (Schema 2) Data for Course Page ---
-    headerImage: "/courses/henna-mixology.png",
-    longDescription:
-      "The Diploma in Henna & Mixology by CeyLearn Academy (Pvt) Ltd is a 3-month hands-on practical program designed for learners who want to master professional henna artistry and mixology. This comprehensive course covers basic to advanced henna techniques, creative design patterns, and henna product preparation, along with business and client management. Students will gain practical experience in bridal and thematic designs, color mixing, and commercial henna cone creation, culminating in a professional henna portfolio.",
-    duration: "3 Months",
-    level: "Beginner to Advanced",
-    whatYouWillLearn: [
-      "Henna tools, materials, and basic pattern elements",
-      "Floral & vine designs and Gulf style patterns",
-      "Indo-Arabic, Moroccan, Indian styles and heavy bridal hand designs",
-      "Advanced thematic designs: peacock, portrait, and special occasion motifs",
-      "Prepare professional henna cones in multiple types and colours",
-      "Aftercare balm, sealant sprays, cone sealing, and packaging",
-      "Business tips, pricing, client handling, and portfolio creation",
-    ],
-    modules: [
-      {
-        title: "Module 1: Introduction to Henna & Basic Elements (Classes 1–3)",
-        description:
-          "History and cultural importance of henna, tools and materials introduction, basic elements (borders, grids, flower centers, mandalas).",
-      },
-      {
-        title: "Module 2: Floral & Vine Designs (Classes 4–6)",
-        description:
-          "Flower formation techniques and advanced floral designs, vines and connecting patterns, Gulf style design.",
-      },
-      {
-        title: "Module 3: Intermediate Henna Styles (Classes 7–10)",
-        description:
-          "Indo-Arabic designs, negative filling techniques, finger designs, Moroccan & Indian traditional designs, heavy bridal hand designs.",
-      },
-      {
-        title: "Module 4: Advanced & Thematic Designs (Classes 11–15)",
-        description:
-          "Leg designs, peacock patterns, musical instrument patterns, portraits & elephants, baby shower / Jhumka / Mangi designs, start-up design composition.",
-      },
-      {
-        title: "Module 5: Henna Mixology & Product Preparation (Classes 16–18)",
-        description:
-          "Luxury, budget, practice, permanent nail, acrylic, and glitter henna cones, colored henna cones (Red, Blue, White, Yellow, Green).",
-      },
-      {
-        title: "Module 6: Henna Products & Aftercare (Classes 19–20)",
-        description:
-          "Aftercare balm preparation & sealant sprays, cone sealing and packaging, choosing the best henna powder.",
-      },
-      {
-        title: "Module 7: Business & Client Handling (Classes 21–22)",
-        description:
-          "Business tips and marketing strategies, pricing, client handling, and bookings, portfolio creation.",
-      },
-      {
-        title: "Module 8: Practical Assessment & Final Project (Classes 23–24)",
-        description:
-          "Final hands-on assessment, bridal design project, portfolio evaluation.",
-      },
-    ],
-  },
+  //   // --- (Schema 2) Data for Course Page ---
+  //   headerImage: "/courses/henna-mixology.png",
+  //   longDescription:
+  //     "The Diploma in Henna & Mixology by CeyLearn Academy (Pvt) Ltd is a 3-month hands-on practical program designed for learners who want to master professional henna artistry and mixology. This comprehensive course covers basic to advanced henna techniques, creative design patterns, and henna product preparation, along with business and client management. Students will gain practical experience in bridal and thematic designs, color mixing, and commercial henna cone creation, culminating in a professional henna portfolio.",
+  //   duration: "3 Months",
+  //   level: "Beginner to Advanced",
+  //   whatYouWillLearn: [
+  //     "Henna tools, materials, and basic pattern elements",
+  //     "Floral & vine designs and Gulf style patterns",
+  //     "Indo-Arabic, Moroccan, Indian styles and heavy bridal hand designs",
+  //     "Advanced thematic designs: peacock, portrait, and special occasion motifs",
+  //     "Prepare professional henna cones in multiple types and colours",
+  //     "Aftercare balm, sealant sprays, cone sealing, and packaging",
+  //     "Business tips, pricing, client handling, and portfolio creation",
+  //   ],
+  //   modules: [
+  //     {
+  //       title: "Module 1: Introduction to Henna & Basic Elements (Classes 1–3)",
+  //       description:
+  //         "History and cultural importance of henna, tools and materials introduction, basic elements (borders, grids, flower centers, mandalas).",
+  //     },
+  //     {
+  //       title: "Module 2: Floral & Vine Designs (Classes 4–6)",
+  //       description:
+  //         "Flower formation techniques and advanced floral designs, vines and connecting patterns, Gulf style design.",
+  //     },
+  //     {
+  //       title: "Module 3: Intermediate Henna Styles (Classes 7–10)",
+  //       description:
+  //         "Indo-Arabic designs, negative filling techniques, finger designs, Moroccan & Indian traditional designs, heavy bridal hand designs.",
+  //     },
+  //     {
+  //       title: "Module 4: Advanced & Thematic Designs (Classes 11–15)",
+  //       description:
+  //         "Leg designs, peacock patterns, musical instrument patterns, portraits & elephants, baby shower / Jhumka / Mangi designs, start-up design composition.",
+  //     },
+  //     {
+  //       title: "Module 5: Henna Mixology & Product Preparation (Classes 16–18)",
+  //       description:
+  //         "Luxury, budget, practice, permanent nail, acrylic, and glitter henna cones, colored henna cones (Red, Blue, White, Yellow, Green).",
+  //     },
+  //     {
+  //       title: "Module 6: Henna Products & Aftercare (Classes 19–20)",
+  //       description:
+  //         "Aftercare balm preparation & sealant sprays, cone sealing and packaging, choosing the best henna powder.",
+  //     },
+  //     {
+  //       title: "Module 7: Business & Client Handling (Classes 21–22)",
+  //       description:
+  //         "Business tips and marketing strategies, pricing, client handling, and bookings, portfolio creation.",
+  //     },
+  //     {
+  //       title: "Module 8: Practical Assessment & Final Project (Classes 23–24)",
+  //       description:
+  //         "Final hands-on assessment, bridal design project, portfolio evaluation.",
+  //     },
+  //   ],
+  // },
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "diploma-in-cake-making-decoration",
@@ -493,7 +493,7 @@ export const allCourses = [
   {
     // --- (Schema 1) Data for Course Card ---
     slug: "professional-certificate-social-media-marketing",
-    title: "Professional Certificate in Social Media Marketing & Management",
+    title: "Professional Certificate in Social Media Marketing",
     summary:
       "A 3-month practical program covering content creation, paid advertising, analytics, and freelancing to launch a career in social media marketing.",
     cardImage: "/courses/social-media-marketing.png",
