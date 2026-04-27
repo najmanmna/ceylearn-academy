@@ -6,7 +6,7 @@ import Image from "next/image";
 // Feature data array - matches the image exactly
 const features = [
   {
-    iconPath: "/icons/professor (1).png", // Replace with your actual path
+    iconPath: "/icons/professorx.png", // Replace with your actual path
     title: "Expert Instructors",
     description:
       "Learn from industry professionals with real-world experience.",

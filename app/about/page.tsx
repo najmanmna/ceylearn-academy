@@ -213,43 +213,28 @@ export default function AboutUsPage() {
         </section>
 
     {/* INSTRUCTORS */}
-<section className="py-16 sm:py-24 bg-white_gray text-center">
+{/* <section className="py-16 sm:py-24 bg-white_gray text-center">
   <div className="container mx-auto px-6 max-w-6xl">
     <h2 className="text-3xl md:text-4xl font-bold text-dark_blue mb-6">
       Meet Our Expert Team
     </h2>
     
-    {/* CHANGE #1: Improved Readability
-      'text-gray-700' was very hard to read on 'bg-dark_blue'.
-      Switched to 'text-gray-300' for soft, readable contrast.
-      Also increased bottom margin to 'mb-16' for better section spacing.
-    */}
+  
     <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-16">
       Learn from instructors who bring real-world expertise and passion
       to every session.
     </p>
 
-    {/* CHANGE #2: Better Responsive Grid
-      'grid-cols-2 md:grid-cols-5' is an awkward jump.
-      This new grid flows better: 1 col on mobile, 2 on small, 4 on large.
-    */}
+   
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {instructors.map((i) => (
         <motion.div
           key={i.id}
           
-          /* CHANGE #3: Enhanced Hover Animation
-            Added 'scale: 1.03' and a slightly stronger 'y: -8'
-            to make the hover effect more satisfying.
-          */
+        
           whileHover={{ y: -8, scale: 1.03 }}
           
-          /*
-            CHANGE #4: Smoother Transitions & Shadow
-            Added 'duration-300' and 'ease-in-out' to smooth all transitions.
-            Upgraded shadow from 'shadow-md' to 'shadow-lg' (and 'shadow-2xl' on hover)
-            for a more pronounced "lift" effect.
-          */
+     
           className="bg-white_gray rounded-xl overflow-hidden border-4 border-brand_orange shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out"
         >
           <Image
@@ -260,10 +245,7 @@ export default function AboutUsPage() {
             className="object-cover w-full h-60 md:h-64" // h-60 on smaller screens
           />
           
-          {/* CHANGE #5: More Breathing Room
-            Increased padding from 'p-4' to 'p-6' to give the
-            text content more space.
-          */}
+        
           <div className="p-6">
             <h3 className="text-lg font-semibold text-dark_blue">
               {i.name}
@@ -274,7 +256,7 @@ export default function AboutUsPage() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
         {/* STATS */}
     <section className="py-20 bg-white">
