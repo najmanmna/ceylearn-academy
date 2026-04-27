@@ -21,7 +21,7 @@ jobs:
           node-version: '22'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Next.js App for Cloudflare
         run: npx @cloudflare/next-on-pages
