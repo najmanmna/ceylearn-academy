@@ -1,3 +1,4 @@
+// app/contact-us/page.tsx
 "use client";
 
 import { useState, FormEvent } from "react";
@@ -17,32 +18,65 @@ import {
   Check,
   Copy,
   Loader2,
+  AlertTriangle, // Added for error state
 } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
-import { allCourses } from "@/data/courseData"; 
+import { allCourses } from "@/data/courseData";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function ContactUsPage() {
   // --- State for Form Handling ---
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false); // Added generic error state
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
   // --- Handlers ---
   
-  // Simulate Form Submission
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // Connect Form to Resend API Endpoint
+  // Find this function in page.tsx and replace it entirely
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setIsError(false); // Reset error state on new attempt
 
-    // Simulate network delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+  // *** STEP 1: Store the form element reference in a variable! ***
+  const formElement = e.currentTarget; 
 
+  // Get form data directly from the form element, using the variable
+  const formData = new FormData(formElement); 
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    // Send form data to the server-side API route
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    // Handle the server response
+    if (response.ok) {
+      // Success: Show the success message and clear the form
+      setIsSuccess(true);
+      // *** STEP 2: Use the variable to reset the form! ***
+      formElement.reset(); // Now this is safe!
+    } else {
+      // API Error: Display a general error to the user
+      setIsError(true);
+      console.error("Form submission failed on server.");
+    }
+  } catch (error) {
+    // Network/Runtime Error: Display error state
+    console.error("Submission error:", error);
+    setIsError(true);
+  } finally {
+    // Always stop the loading state
     setIsSubmitting(false);
-    setIsSuccess(true);
-    // Reset success message after 5 seconds if you want
-    // setTimeout(() => setIsSuccess(false), 5000);
-  };
+  }
+};
 
   // Copy to Clipboard Utility
   const handleCopy = (text: string, field: string) => {
@@ -86,8 +120,17 @@ export default function ContactUsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
               
               {/* Left Column: Contact Form */}
-              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100">
-                <div className="mb-8">
+              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
+                
+                {/* General API Error State (Added) */}
+                {isError && (
+                  <div className="absolute top-4 left-4 right-4 bg-red-50 text-red-700 p-4 rounded-lg flex items-center gap-3 border border-red-200 z-10 animate-fade-in">
+                    <AlertTriangle size={20} className="shrink-0"/>
+                    <p className="text-sm font-medium">Failed to send message. Please try again or call us.</p>
+                  </div>
+                )}
+
+                <div className="mb-8 mt-12 lg:mt-0"> {/* Adjusted margin-top for mobile error overlap */}
                   <h2 className="text-3xl font-bold text-dark_blue">
                     Send Us a Message
                   </h2>
@@ -123,7 +166,7 @@ export default function ContactUsPage() {
                       </label>
                       <input
                         type="text"
-                        name="name"
+                        name="name" // Use 'name' attribute
                         id="name"
                         required
                         placeholder="John Doe"
@@ -138,7 +181,7 @@ export default function ContactUsPage() {
                         </label>
                         <input
                           type="email"
-                          name="email"
+                          name="email" // Use 'name' attribute
                           id="email"
                           required
                           placeholder="john@example.com"
@@ -151,7 +194,7 @@ export default function ContactUsPage() {
                         </label>
                         <input
                           type="tel"
-                          name="phone"
+                          name="phone" // Use 'name' attribute
                           id="phone"
                           placeholder="077 123 4567"
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand_orange/50 focus:border-brand_orange transition-all"
@@ -165,7 +208,7 @@ export default function ContactUsPage() {
                       </label>
                       <div className="relative">
                         <select
-                          name="subject"
+                          name="subject" // Use 'name' attribute
                           id="subject"
                           required
                           defaultValue=""
@@ -192,7 +235,7 @@ export default function ContactUsPage() {
                       </label>
                       <textarea
                         id="message"
-                        name="message"
+                        name="message" // Use 'name' attribute
                         rows={4}
                         required
                         placeholder="Tell us how we can help you..."
@@ -330,8 +373,10 @@ export default function ContactUsPage() {
                   </div>
                 </div>
 
-                {/* Map Embed - Fixed URL for Mawanella */}
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 h-80">
+                {/* Map Embed - FIXED Google Maps Embed URL for Mawanella */}
+               
+{/* Map Embed - FIXED Google Maps Embed URL for Mawanella */}
+ <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 h-80">
                   <iframe
                     width="100%"
                     height="100%"
