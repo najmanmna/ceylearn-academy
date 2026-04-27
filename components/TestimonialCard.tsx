@@ -9,7 +9,7 @@ export interface TestimonialCardProps {
   isActive?: boolean; // Optional prop to indicate if the card is the currently active/centered one
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, title, quote, isActive }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, title, quote }) => {
   return (
     // You could use isActive here for different styling if needed
     // Example: className={`pt-14 h-full ${isActive ? 'shadow-2xl' : ''}`}

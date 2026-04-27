@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const About = () => {
   return (
     <section className="py-16 md:py-24 bg-gray-300">
@@ -11,7 +13,7 @@ const About = () => {
             
             <div className="text-slate-800 space-y-4 mb-8">
               <p className="leading-relaxed">
-                Guided by our mission, <em>"Empowering Education, Embracing Excellence,"</em> <strong>Ceylearn Academy</strong> is committed to nurturing skills and fostering personal and professional growth. We offer a comprehensive selection of diploma and certificate programs — from cutting-edge <strong>Graphic Design</strong> and <strong>Information Technology</strong> to the intricate artistry of <strong>Mehandi</strong>, <strong>Bridal Makeup</strong>, and <strong>Event Planning</strong>. Our expert-led, practical training ensures that every student gains career-ready skills and the confidence to excel in their chosen field.
+                                 Guided by our mission, <em>&quot;Empowering Education, Embracing Excellence,&quot;</em> <strong>Ceylearn Academy</strong> is committed to nurturing skills and fostering personal and professional growth. We offer a comprehensive selection of diploma and certificate programs — from cutting-edge <strong>Graphic Design</strong> and <strong>Information Technology</strong> to the intricate artistry of <strong>Mehandi</strong>, <strong>Bridal Makeup</strong>, and <strong>Event Planning</strong>. Our expert-led, practical training ensures that every student gains career-ready skills and the confidence to excel in their chosen field.
               </p>
             </div>
 
@@ -25,11 +27,12 @@ const About = () => {
 
           {/* Right Content - Image */}
           <div className="flex-1 lg:pl-8">
-            <div className="rounded-full overflow-hidden shadow-xl">
-              <img
-                src="/images/aboutimage.png" // Replace with your actual image path
+            <div className="relative rounded-full overflow-hidden shadow-xl aspect-square">
+              <Image
+                src="/images/aboutimage.png"
                 alt="Ceylearn Academy team collaboration"
-                className="w-full h-auto object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>

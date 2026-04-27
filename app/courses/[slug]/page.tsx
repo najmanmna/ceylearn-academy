@@ -103,7 +103,7 @@ export default async function CourseDetailsPage({
             <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
               <h2 className="text-2xl font-bold text-dark_blue mb-6 flex items-center gap-3">
                 <CheckCircle2 className="text-brand_orange" size={24} />
-                What You'll Learn
+                What You&apos;ll Learn
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.whatYouWillLearn.map((item, index) => (

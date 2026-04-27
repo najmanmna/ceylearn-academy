@@ -1,7 +1,7 @@
 
 // Feature data array
 // Updated: Text now matches the image exactly, including typos
-import { UserCircle, MonitorPlay, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 // Feature data array - matches the image exactly
 const features = [
@@ -53,12 +53,14 @@ const WhyChoose = () => {
                 <div className="absolute inset-0 rounded-full border-4 border-orange-500"></div>
                 
                 {/* Inner Circle - White Background with slight gap */}
-                <div className="absolute inset-2 rounded-full bg-white border-4 border-slate-800 flex items-center justify-center">
+                 <div className="absolute inset-2 rounded-full bg-white border-4 border-slate-800 flex items-center justify-center">
                   {/* Icon Image */}
-                  <img 
-                    src={feature.iconPath} 
+                  <Image
+                    src={feature.iconPath}
                     alt={feature.title}
-                    className="w-18 h-18 object-contain"
+                    width={72}
+                    height={72}
+                    className="object-contain"
                   />
                 </div>
               </div>

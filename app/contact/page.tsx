@@ -109,7 +109,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
               Contact Us
             </h1>
             <p className="text-lg md:text-2xl text-brand_orange font-medium animate-fade-in-up">
-              We're here to help you start your journey.
+              We&apos;re here to help you start your journey.
             </p>
           </div>
         </section>
@@ -136,7 +136,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
                   </h2>
                   <div className="h-1.5 w-20 bg-brand_orange rounded-full mt-3"></div>
                   <p className="mt-4 text-gray-600">
-                    Have a question about a course? Fill out the form and we'll get back to you within 24 hours.
+                     Have a question about a course? Fill out the form and we&apos;ll get back to you within 24 hours.
                   </p>
                 </div>
 

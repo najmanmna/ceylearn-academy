@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 type GalleryItem = {
@@ -25,10 +26,11 @@ const GalleryImage: React.FC<GalleryImageProps> = ({ item }) => {
           exit={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
         >
-          <img
+          <Image
             src={item.src}
             alt={item.alt}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         </motion.div>
       </AnimatePresence>

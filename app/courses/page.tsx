@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react"; // Added useMemo for optimization
+import { useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,45 +21,26 @@ export default function CoursesPage() {
   const programTypes = ["All", "Diploma", "Certificate"];
 
   // --- Filtering Logic ---
-  // We use useMemo to re-run filtering and sorting only when inputs change
-  const filteredAndSortedCourses = useMemo(() => {
-    // 1. First, apply existing filtering logic
-    const filtered = coursesData.filter((course) => {
-      // 1a. Category Match
-      const matchesCategory =
-        selectedCategory === "All" || course.category === selectedCategory;
+  const filtered = coursesData.filter((course) => {
+    const matchesCategory =
+      selectedCategory === "All" || course.category === selectedCategory;
+    const matchesType =
+      selectedType === "All" ||
+      course.title.toLowerCase().includes(selectedType.toLowerCase());
+    const matchesSearch = course.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesType && matchesSearch;
+  });
 
-      // 1b. Type Match (Check if title contains "Diploma" or "Certificate")
-      const matchesType =
-        selectedType === "All" ||
-        course.title.toLowerCase().includes(selectedType.toLowerCase());
-
-      // 1c. Search Match
-      const matchesSearch = course.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-
-      return matchesCategory && matchesType && matchesSearch;
-    });
-
-    // 2. NEW LOGIC: Apply Priority Sorting (Always keep 'Technology' on top)
-    // We create a new array to avoid mutating the filtered one
-    return [...filtered].sort((a, b) => {
-      const priorityCategory = "Technology & IT"; // Define the category that gets top billing
-
-      // Optimization: Check exact string match
-      const aIsPriority = a.category === priorityCategory;
-      const bIsPriority = b.category === priorityCategory;
-
-      if (aIsPriority && !bIsPriority) {
-        return -1; // a comes first
-      } else if (!aIsPriority && bIsPriority) {
-        return 1; // b comes first
-      } else {
-        return 0; // Both are 'Technology' or both are not, keep relative order
-      }
-    });
-  }, [selectedCategory, selectedType, searchQuery]); // Re-run when these values change
+  const filteredAndSortedCourses = [...filtered].sort((a, b) => {
+    const priorityCategory = "Technology & IT";
+    const aIsPriority = a.category === priorityCategory;
+    const bIsPriority = b.category === priorityCategory;
+    if (aIsPriority && !bIsPriority) return -1;
+    else if (!aIsPriority && bIsPriority) return 1;
+    else return 0;
+  });
 
   // --- Handlers ---
   const handleCategoryChange = (category: string) => {
@@ -205,8 +186,8 @@ export default function CoursesPage() {
                     No matching courses found
                   </h3>
                   <p className="text-gray-500 mt-2 max-w-md">
-                    We couldn't find any {selectedType !== "All" ? selectedType : ""}{" "}
-                    courses in the "{selectedCategory}" category matching "{searchQuery}".
+                    We couldn&apos;t find any {selectedType !== "All" ? selectedType : ""}{" "}
+                    courses in the &quot;{selectedCategory}&quot; category matching &quot;{searchQuery}&quot;.
                   </p>
                   <button
                     onClick={() => {
