@@ -142,10 +142,10 @@ const Header = () => {
             <Image
               src="/logo.png"
               alt="Ceylearn Academy Logo"
-              width={150} // Smaller logo on mobile
-              height={123} // Adjusted height for 150px width
+              width={220}
+              height={180}
               priority
-              className="md:w-[220px] " // Larger logo on desktop
+              className="w-[150px] md:w-[220px] h-auto"
             />
           </Link>
 
